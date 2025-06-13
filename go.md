@@ -1,16 +1,13 @@
-
-
-🧭 Estrutura do Treinamento
+# 🧭 Estrutura do Treinamento
 
 - Duração sugerida: 5 dias (4h por dia) ou 10 sessões (2h cada)
 - Formato: Teórico + Mão na massa (cada módulo tem lab)
 - Pré-requisitos: Conhecimento prévio em backend com Java/Python, Git, HTTP/REST, e banco de dados relacional.
 
 
-📚 Conteúdo Programático
+# 📚 Conteúdo Programático
 
-
-Módulo 1 – Introdução e Fundamentos da Linguagem
+## [Módulo 01](Modulo_01.md) – Introdução e Fundamentos da Linguagem
 
 - História e propósito do Go
 - Características da linguagem (simplicidade, performance, concorrência)
@@ -22,7 +19,7 @@ Módulo 1 – Introdução e Fundamentos da Linguagem
 
 ---
 
-Módulo 2 – Estruturas de Controle e Tipos Compostos
+## [Módulo 02](Modulo_02.md) – Estruturas de Controle e Tipos Compostos
 
 - if, for, switch, defer
 - Arrays, slices, maps
@@ -33,7 +30,7 @@ Módulo 2 – Estruturas de Controle e Tipos Compostos
 
 ---
 
-Módulo 3 – Funções, Métodos e Interfaces
+## [Módulo 03](Modulo_03.md) – Funções, Métodos e Interfaces
 
 - Funções com múltiplos retornos
 - Funções anônimas e closures
@@ -45,7 +42,7 @@ Módulo 3 – Funções, Métodos e Interfaces
 
 ---
 
-Módulo 4 – Tratamento de Erros
+## [Módulo 04](Modulo_04.md) – Tratamento de Erros
 
 - Filosofia do Go: erros explícitos
 - Padrão error, errors.New, fmt.Errorf
@@ -56,7 +53,7 @@ Módulo 4 – Tratamento de Erros
 
 ---
 
-Módulo 5 – Concorrência com Goroutines e Channels
+## [Módulo 05](Modulo_05.md) – Concorrência com Goroutines e Channels
 
 - Goroutines: o que são e como usar
 - Channels (unbuffered, buffered)
@@ -67,7 +64,7 @@ Módulo 5 – Concorrência com Goroutines e Channels
 
 ---
 
-Módulo 6 – Pacotes, Módulos e Organização do Código
+## [Módulo 06](Modulo_06.md) – Pacotes, Módulos e Organização do Código
 
 - Estrutura de pacotes idiomática
 - Convenções de projeto (cmd, internal, pkg)
@@ -78,7 +75,7 @@ Módulo 6 – Pacotes, Módulos e Organização do Código
 
 ---
 
-Módulo 7 – Testes e Qualidade de Código
+## [Módulo 07](Modulo_07.md) – Testes e Qualidade de Código
 
 - Testes com testing
 - Testes de unidade e integração
@@ -90,7 +87,7 @@ Módulo 7 – Testes e Qualidade de Código
 
 ---
 
-Módulo 8 – Web APIs com net/http e Gin
+## [Módulo 08](Modulo_08.md) – Web APIs com net/http e Gin
 
 - Servidor HTTP com net/http
 - Middlewares e handlers
@@ -101,7 +98,7 @@ Módulo 8 – Web APIs com net/http e Gin
 
 ---
 
-Módulo 9 – Persistência com Banco de Dados
+## [Módulo 09](Modulo_09.md) – Persistência com Banco de Dados
 
 - Drivers e database/sql
 - ORM com gorm
@@ -112,7 +109,7 @@ Módulo 9 – Persistência com Banco de Dados
 
 ---
 
-Módulo 10 – Deploy, Observabilidade e Boas Práticas
+## [Módulo 10](Modulo_10.md) – Deploy, Observabilidade e Boas Práticas
 
 - Build com go build, cross-compilation
 - Docker com Go
