@@ -11,7 +11,7 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Simplicidade',
+    title: 'Simples',
     Svg: require('@site/static/img/gopher-simple-sm.svg').default,
     description: (
       <>
@@ -22,7 +22,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Velocidade',
+    title: 'Rápido',
     Svg: require('@site/static/img/gopher-flash-sm.svg').default,
     description: (
       <>
