@@ -1,51 +1,45 @@
-name: Deploy to GitHub Pages
+name: Deploy Docusaurus to GitHub Pages
 
 on:
   push:
     branches:
-    - main
-    # Review gh actions docs if you want to further define triggers, paths, etc
-    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+    - main # Ou a branch principal do seu projeto (ex: master)
+  pull_request:
+    branches:
+    - main # Ou a branch principal do seu projeto
 
 jobs:
-  build:
-    name: Build
+  deploy:
+    name: Deploy
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
       with:
-        fetch-depth: 0
-    - uses: actions/setup-node@v4
-      with:
-        node-version: 19
-        cache: npm
+        node-version: '18' # Use uma versão LTS do Node.js
+        cache: 'npm'
 
     - name: Install dependencies
       run: npm ci
-    - name: Build website
-      run: npm build
 
-    - name: Upload Build Artifact
+    - name: Build
+      run: npm run build
+
+    - name: Setup Pages
+      uses: actions/configure-pages@v5
+
+    - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: build
+        path: ./build
 
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: build
-
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write # to deploy to Pages
-      id-token: write # to verify the deployment originates from an appropriate source
-
-    # Deploy to the github-pages environment
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    runs-on: ubuntu-latest
-    steps:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
