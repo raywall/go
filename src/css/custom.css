@@ -35,11 +35,7 @@
   --ifm-navbar-link-color: #fff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
-/* .gopher-first-image {
-  height: 180px;
-  margin-bottom: -4rem;
-  margin-top: -3rem;
-} */
+
 .navbar__link {
   font-weight: var(--ifm-font-weight-normal);
   border-bottom: 2px solid transparent;
@@ -120,8 +116,11 @@
   background-color: var(--ifm-tabs-color-active);
   border:0;
 }
-
 .lab-tabs {
   border-bottom: 4px solid var(--ifm-tabs-color-active);
   padding-bottom: 0.4rem;
+}
+.footer__copyright {
+  margin-top: 3rem;
+  font-size: .7rem;
 }

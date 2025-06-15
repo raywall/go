@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Let`s Go',
-  tagline: 'Curso rápido de Golang para desenvolvedores',
+  tagline: 'curso intensivo de Go para desenvolvedores',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -132,10 +132,14 @@ const config: Config = {
               label: 'Linkedin',
               href: 'https://www.linkedin.com/in/raywall/',
             },
+            {
+              label: 'Descomplicando IA para Analistas de Produto',
+              href: 'https://www.amazon.com.br/Descomplicando-Intelig%C3%AAncia-Artificial-Analistas-Produto/dp/6501238455',
+            }
           ],
         },
       ],
-      // copyright: `Copyright © ${new Date().getFullYear()} Aprenda Golang, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Raywall Malheiros. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

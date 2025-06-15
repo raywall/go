@@ -11,26 +11,24 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Simples',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Simplicidade',
+    Svg: require('@site/static/img/gopher-simple-sm.svg').default,
     description: (
       <>
-        Go oferece uma sintaxe limpa e minimalista que elimina a verbosidade 
-        comum em outras linguagens. Para um desenvolvedor Java, isso significa
-        menos c&oacute;digo para escrever e uma curva de aprendizado incrivelmente
-        suave para se tornar produtivo em pouqu&iacute;ssimo tempo.
+        Sintaxe minimalista e intuitiva, projetada para ser extremamente f&aacute;cil
+        de aprender e ler. Escreva c&oacute;digo limpo e direto ao ponto,
+        aumentando sua produtividade desde o in&iacute;cio.
       </>
     ),
   },
   {
-    title: 'Rápido',
+    title: 'Velocidade',
     Svg: require('@site/static/img/gopher-flash-sm.svg').default,
     description: (
       <>
-        Projetado para performance, Go compila diretamente para c&oacute;digo de m&aacute;quina, 
-        resultando em inicialização quase instant&acirc;nea e um desempenho excepcional. Esque&ccedil;a 
-        o tempo de aquecimento da JVM; suas aplicações Go rodam com velocidade máxima desde o 
-        primeiro momento.
+        Possui alta performance e compila diretamente para código de m&aacute;quina,
+        entregando aplica&ccedil;&otilde;es com inicializa&ccedil;&atilde;o quase instant&acirc;nea e
+        desempenho excepcional para qualquer tarefa.
       </>
     ),
   },
@@ -39,10 +37,9 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/gopher-strong-sm.svg').default,
     description: (
       <>
-        A concorr&ecirc;ncia é uma cidad&atilde; de primeira classe em Go, com 
-        goroutines e channels integrados &agrave; linguagem. Construir sistemas complexos 
-        e concorrentes se torna uma tarefa trivial, permitindo que voc&ecirc; aproveite ao 
-        m&aacute;ximo os processadores multi-core modernos sem esfor&ccedil;o.
+        Possui concorr&ecirc;ncia nativa. Com goroutines e channels, voc&ecirc; pode criar
+        sistemas complexos e eficientes que aproveitam ao m&aacute;ximo o hardware
+        moderno de forma descomplicada.
       </>
     ),
   },
