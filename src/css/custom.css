@@ -1,0 +1,127 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #007d9c;
+  --ifm-color-primary-dark: #007d9c;
+  --ifm-color-primary-darker: #007b9a;
+  --ifm-color-primary-darkest: #007b9a;
+  --ifm-color-primary-light: #009fc6;
+  --ifm-color-primary-lighter: #009fc6;
+  --ifm-color-primary-lightest: #00aed9;
+  --ifm-code-font-size: 95%;
+  --ifm-navbar-height: 70px;
+  --ifm-navbar-background-color: #007d9c;
+  --ifm-navbar-link-hover-color: #ccc;
+  --ifm-navbar-link-color: #fff;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #007d9c;
+  --ifm-color-primary-dark: #007d9c;
+  --ifm-color-primary-darker: #007b9a;
+  --ifm-color-primary-darkest: #007b9a;
+  --ifm-color-primary-light: #009fc6;
+  --ifm-color-primary-lighter: #009fc6;
+  --ifm-color-primary-lightest: #00aed9;
+  --ifm-navbar-background-color: #007d9c;
+  --ifm-navbar-link-hover-color: #ccc;
+  --ifm-navbar-link-color: #fff;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+/* .gopher-first-image {
+  height: 180px;
+  margin-bottom: -4rem;
+  margin-top: -3rem;
+} */
+.navbar__link {
+  font-weight: var(--ifm-font-weight-normal);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+}
+.navbar__title {
+  color: #fff;
+  margin-left: 1.3rem;
+}
+.markdown a {
+  font-weight: var(--ifm-font-weight-bold);
+}
+.markdown a code {
+  font-weight: var(--ifm-font-weight-bold);
+}
+.markdown p {
+  line-height: 180%;
+}
+.markdown h1 {
+  --ifm-h1-font-size: 2.0rem;
+  margin: 4rem 0 1rem 0;
+}
+.markdown h2, h3, h4, h5, h6 {
+  --ifm-h2-font-size: 1.7rem;
+  --ifm-h3-font-size: 1.4rem;
+  --ifm-h4-font-size: 1.2rem;
+  --ifm-h5-font-size: 1.0rem;
+  --ifm-h6-font-size: 0.8rem;
+  margin: 2.5rem 0 1rem 0;
+}
+.markdown code {
+  vertical-align: baseline;
+}
+.markdown :not(pre):not(h2):not(h3):not(h4):not(h5):not(h6) > code {
+  border: none;
+}
+.markdown .admonition code {
+  color: inherit;
+}
+.markdown .theme-admonition-info {
+  margin: 2.5rem 0 0.5rem 0;
+}
+.markdown .theme-admonition-tip {
+  margin: 1.5rem 0 2.5rem 0;
+}
+.menu__link {
+  font-size: 0.9rem;
+  font-weight: var(--ifm-font-weight-normal);
+}
+.menu__link--active {
+  font-weight: var(--ifm-font-weight-bold);
+}
+.menu__link--collapsible {
+  font-weight: var(--ifm-font-weight-semibold);
+}
+.theme-doc-sidebar-item-category-level-1 .menu__link--collapsible {
+  font-size: 1rem;
+}
+.theme-doc-sidebar-item-category-level-2 .menu__link--collapsible {
+  font-size: 0.95rem;
+}
+.no-select {
+  user-select: none;
+}
+.card {
+  border: 1px solid rgba(200, 200, 200, 0.3);
+}
+.table-of-contents__link--active {
+  font-weight: var(--ifm-font-weight-bold);
+}
+.lab-tabs .tabs__item {
+  margin-right: 8px;
+  line-height: 16px;
+}
+.lab-tabs .tabs__item--active {
+  color: #fff;
+  border-radius:var(--ifm-global-radius);
+  background-color: var(--ifm-tabs-color-active);
+  border:0;
+}
+
+.lab-tabs {
+  border-bottom: 4px solid var(--ifm-tabs-color-active);
+  padding-bottom: 0.4rem;
+}

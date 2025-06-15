@@ -1,13 +1,10 @@
-# 🧭 Estrutura do Treinamento
+---
+sidebar_position: 2
+---
 
-- Duração sugerida: 5 dias (4h por dia) ou 10 sessões (2h cada)
-- Formato: Teórico + Mão na massa (cada módulo tem lab)
-- Pré-requisitos: Conhecimento prévio em backend com Java/Python, Git, HTTP/REST, e banco de dados relacional.
+# Conteúdo programático
 
-
-# 📚 Conteúdo Programático
-
-## [Módulo 01](Modulo_01.md) – Introdução e Fundamentos da Linguagem
+## [Módulo 01](go-module-1.md) – Introdução e Fundamentos da Linguagem
 
 - História e propósito do Go
 - Características da linguagem (simplicidade, performance, concorrência)
@@ -19,7 +16,7 @@
 
 ---
 
-## [Módulo 02](Modulo_02.md) – Estruturas de Controle e Tipos Compostos
+## [Módulo 02](go-module-2.md) – Estruturas de Controle e Tipos Compostos
 
 - if, for, switch, defer
 - Arrays, slices, maps
@@ -30,7 +27,7 @@
 
 ---
 
-## [Módulo 03](Modulo_03.md) – Funções, Métodos e Interfaces
+## [Módulo 03](go-module-3.md) – Funções, Métodos e Interfaces
 
 - Funções com múltiplos retornos
 - Funções anônimas e closures
@@ -42,7 +39,7 @@
 
 ---
 
-## [Módulo 04](Modulo_04.md) – Tratamento de Erros
+## [Módulo 04](go-module-4.md) – Tratamento de Erros
 
 - Filosofia do Go: erros explícitos
 - Padrão error, errors.New, fmt.Errorf
@@ -53,7 +50,7 @@
 
 ---
 
-## [Módulo 05](Modulo_05.md) – Concorrência com Goroutines e Channels
+## [Módulo 05](go-module-5.md) – Concorrência com Goroutines e Channels
 
 - Goroutines: o que são e como usar
 - Channels (unbuffered, buffered)
@@ -64,7 +61,7 @@
 
 ---
 
-## [Módulo 06](Modulo_06.md) – Pacotes, Módulos e Organização do Código
+## [Módulo 06](go-module-6.md) – Pacotes, Módulos e Organização do Código
 
 - Estrutura de pacotes idiomática
 - Convenções de projeto (cmd, internal, pkg)
@@ -75,7 +72,7 @@
 
 ---
 
-## [Módulo 07](Modulo_07.md) – Testes e Qualidade de Código
+## [Módulo 07](go-module-7.md) – Testes e Qualidade de Código
 
 - Testes com testing
 - Testes de unidade e integração
@@ -87,7 +84,7 @@
 
 ---
 
-## [Módulo 08](Modulo_08.md) – Web APIs com net/http e Gin
+## [Módulo 08](go-module-8.md) – Web APIs com net/http e Gin
 
 - Servidor HTTP com net/http
 - Middlewares e handlers
@@ -98,7 +95,7 @@
 
 ---
 
-## [Módulo 09](Modulo_09.md) – Persistência com Banco de Dados
+## [Módulo 09](go-module-9.md) – Persistência com Banco de Dados
 
 - Drivers e database/sql
 - ORM com gorm
@@ -109,7 +106,7 @@
 
 ---
 
-## [Módulo 10](Modulo_10.md) – Deploy, Observabilidade e Boas Práticas
+## [Módulo 10](go-module-10.md) – Deploy, Observabilidade e Boas Práticas
 
 - Build com go build, cross-compilation
 - Docker com Go
@@ -118,17 +115,3 @@
 - Linter, cobertura, documentação automática com godoc
 
 📌 Lab: Containerizar o serviço e expor métricas/trace/logs.
-
----
-
-🎯 Objetivo Final (Desafio de Encerramento)
-
-Construir em grupo uma API de pedidos de e-commerce com:
-
-- Autenticação
-- Validação
-- Persistência
-- Concorrência para envio de e-mails assíncronos
-- Testes
-- Docker
-- Observabilidade
