@@ -15,8 +15,10 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Go oferece uma sintaxe limpa e minimalista que elimina a verbosidade 
+        comum em outras linguagens. Para um desenvolvedor Java, isso significa
+        menos c&oacute;digo para escrever e uma curva de aprendizado incrivelmente
+        suave para se tornar produtivo em pouqu&iacute;ssimo tempo.
       </>
     ),
   },
@@ -25,8 +27,10 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/gopher-flash-sm.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Projetado para performance, Go compila diretamente para c&oacute;digo de m&aacute;quina, 
+        resultando em inicialização quase instant&acirc;nea e um desempenho excepcional. Esque&ccedil;a 
+        o tempo de aquecimento da JVM; suas aplicações Go rodam com velocidade máxima desde o 
+        primeiro momento.
       </>
     ),
   },
@@ -35,8 +39,10 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/gopher-strong-sm.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        A concorr&ecirc;ncia é uma cidad&atilde; de primeira classe em Go, com 
+        goroutines e channels integrados &agrave; linguagem. Construir sistemas complexos 
+        e concorrentes se torna uma tarefa trivial, permitindo que voc&ecirc; aproveite ao 
+        m&aacute;ximo os processadores multi-core modernos sem esfor&ccedil;o.
       </>
     ),
   },
