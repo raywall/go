@@ -18,6 +18,7 @@
   --ifm-navbar-background-color: #007d9c;
   --ifm-navbar-link-hover-color: #fff;
   --ifm-navbar-link-color: #fff;
+  --ifm-menu-color: #fff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
@@ -33,6 +34,7 @@
   --ifm-navbar-background-color: #007d9c;
   --ifm-navbar-link-hover-color: #fff;
   --ifm-navbar-link-color: #fff;
+  --ifm-menu-color: #fff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
