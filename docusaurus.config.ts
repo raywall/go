@@ -40,9 +40,9 @@ const config: Config = {
     [
       'classic',
       {
-        googleAnalytics: {
+        gtag: {
           trackingID: "G-JTYKZ2TBVQ",
-          anonymiseIP: true,
+          anonymizeIP: true,
         },
         docs: {
           sidebarPath: './sidebars.ts',
