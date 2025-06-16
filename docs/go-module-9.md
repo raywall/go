@@ -6,7 +6,7 @@ sidebar_label: Módulo 09
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ersistência com banco de dados em Go
+# Persistência com banco de dados em Go
 
 Este módulo aborda a persistência de dados em Go, usando o pacote padrão `database/sql`, o ORM `GORM`, migrações com `golang-migrate`, e _testes de integração com bancos de dados_. O conteúdo é voltado para engenheiros Java, com comparações ao Spring Data e Hibernate, e mantém-se objetivo com exemplos práticos e casos de uso.
 
