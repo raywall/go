@@ -373,7 +373,7 @@ func (p *Produto) BeforeCreate(tx *gorm.DB) error {
 }
 ```
 
-4. Crie o arquivo `internal/repo/postgress.go` com o conteúdo:
+4. Crie o arquivo `internal/repo/postgres.go` com o conteúdo:
 
 ```go
 package repo
