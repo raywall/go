@@ -16,7 +16,7 @@
   --ifm-code-font-size: 95%;
   --ifm-navbar-height: 70px;
   --ifm-navbar-background-color: #007d9c;
-  --ifm-navbar-link-hover-color: #ccc;
+  --ifm-navbar-link-hover-color: #fff;
   --ifm-navbar-link-color: #fff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
@@ -31,7 +31,7 @@
   --ifm-color-primary-lighter: #009fc6;
   --ifm-color-primary-lightest: #00aed9;
   --ifm-navbar-background-color: #007d9c;
-  --ifm-navbar-link-hover-color: #ccc;
+  --ifm-navbar-link-hover-color: #fff;
   --ifm-navbar-link-color: #fff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
