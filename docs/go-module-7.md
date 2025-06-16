@@ -110,6 +110,7 @@ func TestSoma(t *testing.T) {
 
 :::info Caso de uso
 Testes de unidade `verificam lógica de negócio`; já os testes de integração `garantem que módulos funcionem juntos` (ex: repositório e serviço)
+:::
 
 <br />
 

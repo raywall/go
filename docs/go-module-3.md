@@ -26,21 +26,20 @@ package main
 import "fmt"
 
 func dividir(a, b int) (int, error) {
-    if b == 0 {
-        return 0, fmt.Errorf("divisão por zero")
-    }
-    return a / b, nil
+	if b == 0 {
+		return 0, fmt.Errorf("divisão por zero")
+	}
+	return a / b, nil
 }
 
 func main() {
-    resultado, err := dividir(10, 2)
+	resultado, err := dividir(10, 2)
+	if err != nil {
+		fmt.Println("Erro:", err)
+		return
+	}
 
-    if err != nil
-        fmt.Println("Erro:", err)
-        return
-    }
-
-    fmt.Println("Resultado:", resultado) // Resultado: 5
+	fmt.Println("Resultado:", resultado) // Resultado: 5
 }
 ```
 
@@ -120,27 +119,27 @@ package main
 import "fmt"
 
 type Produto struct {
-    Nome  string
-    Preco float64
+	Nome  string
+	Preco float64
 }
 
 // Método com receiver por valor
 func (p Produto) Descricao() string {
-    return fmt.Sprintf("%s: R$%.2f", p.Nome, p.Preco)
+	return fmt.Sprintf("%s: R$%.2f", p.Nome, p.Preco)
 }
 
 // Método com receiver por ponteiro
-func (p \*Produto) AplicarDesconto(desconto float64) {
-    p.Preco -= p.Preco \* desconto
+func (p *Produto) AplicarDesconto(desconto float64) {
+	p.Preco -= p.Preco * desconto
 }
 
 func main() {
-    p := Produto{Nome: "Laptop", Preco: 1000}
+	p := Produto{Nome: "Laptop", Preco: 1000}
 
-    fmt.Println(p.Descricao()) // Saída: Laptop: R$1000.00
-    p.AplicarDesconto(0.1)
+	fmt.Println(p.Descricao()) // Saída: Laptop: R$1000.00
+	p.AplicarDesconto(0.1)
 
-    fmt.Println(p.Descricao()) // Saída: Laptop: R$900.00
+	fmt.Println(p.Descricao()) // Saída: Laptop: R$900.00
 }
 ```
 
@@ -168,37 +167,37 @@ package main
 import "fmt"
 
 type Descrivivel interface {
-    Descricao() string
+	Descricao() string
 }
 
 type Produto struct {
-    Nome  string
-    Preco float64
+	Nome  string
+	Preco float64
 }
 
 type Servico struct {
-    Nome  string
-    Taxa  float64
+	Nome string
+	Taxa float64
 }
 
 func (p Produto) Descricao() string {
-    return fmt.Sprintf("Produto: %s, R$%.2f", p.Nome, p.Preco)
+	return fmt.Sprintf("Produto: %s, R$%.2f", p.Nome, p.Preco)
 }
 
 func (s Servico) Descricao() string {
-    return fmt.Sprintf("Serviço: %s, R$%.2f", s.Nome, s.Taxa)
+	return fmt.Sprintf("Serviço: %s, R$%.2f", s.Nome, s.Taxa)
 }
 
 func exibir(d Descrivivel) {
-    fmt.Println(d.Descricao())
+	fmt.Println(d.Descricao())
 }
 
 func main() {
-    p := Produto{Nome: "Laptop", Preco: 1000}
-    s := Servico{Nome: "Consultoria", Taxa: 500}
+	p := Produto{Nome: "Laptop", Preco: 1000}
+	s := Servico{Nome: "Consultoria", Taxa: 500}
 
-    exibir(p) // Saída: Produto: Laptop, R$1000.00
-    exibir(s) // Saída: Serviço: Consultoria, R$500.00
+	exibir(p) // Saída: Produto: Laptop, R$1000.00
+	exibir(s) // Saída: Serviço: Consultoria, R$500.00
 }
 ```
 

@@ -31,12 +31,12 @@ package main
 import "fmt"
 
 func main() {
-    numero := 45
-    if x := numero % 2; x == 0 {
-        fmt.Println("Par")
-    } else {
-        fmt.Println("Ímpar")
-    }
+	numero := 45
+	if x := numero % 2; x == 0 {
+		fmt.Println("Par")
+	} else {
+		fmt.Println("Ímpar")
+	}
 }
 ```
 
@@ -67,23 +67,23 @@ package main
 import "fmt"
 
 func main() {
-    // Laço tradicional
-    for i := 0; i < 3; i++ {
-        fmt.Println(i)
-    }
+	// Laço tradicional
+	for i := 0; i < 3; i++ {
+		fmt.Println(i)
+	}
 
-    // Como while
-    contador := 0
-    for contador < 3 {
-        fmt.Println(contador)
-        contador++
-    }
+	// Como while
+	contador := 0
+	for contador < 3 {
+		fmt.Println(contador)
+		contador++
+	}
 
-    // Infinito (com break)
-    for {
-        fmt.Println("Infinito")
-        break
-    }
+	// Infinito (com break)
+	for {
+		fmt.Println("Infinito")
+		break
+	}
 }
 ```
 
@@ -133,8 +133,8 @@ package main
 import "fmt"
 
 func main() {
-    defer fmt.Println("Executado no final")
-    fmt.Println("Executado primeiro")
+	defer fmt.Println("Executado no final")
+	fmt.Println("Executado primeiro")
 }
 ```
 
@@ -175,18 +175,18 @@ package main
 import "fmt"
 
 func main() {
-    // Declaração
-    slice := []int{1, 2, 3}
-    fmt.Println(slice) // [1 2 3]
+	// Declaração
+	slice := []int{1, 2, 3}
+	fmt.Println(slice) // [1 2 3]
 
-    // Adicionar elementos
-    slice = append(slice, 4)
-    fmt.Println(slice) // [1 2 3 4]
+	// Adicionar elementos
+	slice = append(slice, 4)
+	fmt.Println(slice) // [1 2 3 4]
 
-    // Slice a partir de array
-    array := [5]int{1, 2, 3, 4, 5}
-    subSlice := array[1:4] // [2 3 4]
-    fmt.Println(subSlice)
+	// Slice a partir de array
+	array := [5]int{1, 2, 3, 4, 5}
+	subSlice := array[1:4] // [2 3 4]
+	fmt.Println(subSlice)
 }
 ```
 
@@ -207,20 +207,20 @@ package main
 import "fmt"
 
 func main() {
-    m := make(map[string]int)
-    m["idade"] = 45
-    m["preco"] = 99
-    fmt.Println(m) // map[idade:42 preco:99]
+	m := make(map[string]int)
+	m["idade"] = 45
+	m["preco"] = 99
+	fmt.Println(m) // map[idade:42 preco:99]
 
-    // Verificar existência
-    valor, existe := m["idade"]
-    if existe {
-        fmt.Println("Idade:", valor)
-    }
+	// Verificar existência
+	valor, existe := m["idade"]
+	if existe {
+		fmt.Println("Idade:", valor)
+	}
 
-    // Deletar
-    delete(m, "preco")
-    fmt.Println(m) // map[idade:42]
+	// Deletar
+	delete(m, "preco")
+	fmt.Println(m) // map[idade:42]
 }
 ```
 
@@ -243,23 +243,23 @@ package main
 import "fmt"
 
 type Pessoa struct {
-    Nome  string
-    Idade int
+	Nome  string
+	Idade int
 }
 
 func main() {
-    p := Pessoa{Nome: "Raywall", Idade: 45}
-    fmt.Println(p) // {Raywall 45}
+	p := Pessoa{Nome: "Raywall", Idade: 45}
+	fmt.Println(p) // {Raywall 45}
 
-    // Acesso a campos
-    fmt.Println(p.Nome) // Raywall
+	// Acesso a campos
+	fmt.Println(p.Nome) // Raywall
 
-    // Struct anônima
-    anon := struct {
-        Valor string
-    }{Valor: "Teste"}
+	// Struct anônima
+	anon := struct {
+		Valor string
+	}{Valor: "Teste"}
 
-    fmt.Println(anon) // {Teste}
+	fmt.Println(anon) // {Teste}
 }
 ```
 
@@ -274,20 +274,20 @@ func main() {
 package main
 
 import (
-    "encoding/json"
-    "fmt"
+	"encoding/json"
+	"fmt"
 )
 
 type Produto struct {
-    ID    int     `json:"id"`
-    Nome  string  `json:"nome"`
-    Preco float64 `json:"preco,omitempty"`
+	ID    int     `json:"id"`
+	Nome  string  `json:"nome"`
+	Preco float64 `json:"preco,omitempty"`
 }
 
 func main() {
-    p := Produto{ID: 1, Nome: "Laptop"}
-    jsonData, \_ := json.Marshal(p)
-    fmt.Println(string(jsonData)) // {"id":1,"nome":"Laptop"}
+	p := Produto{ID: 1, Nome: "Laptop"}
+	jsonData, _ := json.Marshal(p)
+	fmt.Println(string(jsonData)) // {"id":1,"nome":"Laptop"}
 }
 ```
 
@@ -314,17 +314,17 @@ package main
 import "fmt"
 
 func main() {
-    x := 45
-    p := &x         // Ponteiro para x
-    fmt.Println(*p) // 45 (desreferenciação)
+	x := 45
+	p := &x         // Ponteiro para x
+	fmt.Println(*p) // 45 (desreferenciação)
 
-    // Modificar via ponteiro
-    *p = 100
-    fmt.Println(x) // 100
+	// Modificar via ponteiro
+	*p = 100
+	fmt.Println(x) // 100
 }
 
 func incrementar(p *int) {
-    *p++
+	*p++
 }
 ```
 
