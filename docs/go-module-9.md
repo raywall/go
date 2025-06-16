@@ -52,6 +52,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod9/postgres-sql.go)!
+
 #### Instalação do driver `PostgreSQL`
 
 ```bash
@@ -127,6 +129,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod9/gorm.go)!
+
 #### Comparação com Java
 
 ##### Java
@@ -176,11 +180,15 @@ CREATE TABLE produtos (
 );
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod9/202506120001_create_produtos.up.sql)!
+
 - No arquivo `202506120001_create_produtos.down.sql`, temos:
 
 ```sql
 DROP TABLE produtos;
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod9/202506120001_create_produtos.down.sql)!
 
 - Código para aplicar migrações:
 
@@ -211,6 +219,8 @@ func main() {
 	log.Println("Migrações aplicadas")
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod9/golang-migrate.go)!
 
 #### Comparação com Java
 
@@ -322,6 +332,8 @@ require (
 	github.com/golang-migrate/migrate/v4 v4.17.1
 )
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod9/lab/lab9.zip)!
 
 </TabItem>
 <TabItem value="app">

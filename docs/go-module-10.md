@@ -33,6 +33,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod10/build.go)!
+
 #### Executar
 
 ```bash
@@ -105,6 +107,8 @@ EXPOSE 8080
 CMD ["./app"]
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod10/Dockerfile)!
+
 #### Construir e executar
 
 ```bash
@@ -152,6 +156,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod10/logging-estruturado-slog.go)!
+
 ### `zap`
 
 - Biblioteca de logging de alta performance, alternativa a slog.
@@ -176,6 +182,8 @@ func main() {
 	)
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod10/logging-estruturado-zap.go)!
 
 #### Comparação com Java
 
@@ -239,6 +247,8 @@ func main() {
 	log.Println("Operação rastreada")
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod10/opentelemetry.go)!
 
 #### Comparação com Java
 
@@ -411,6 +421,8 @@ require (
 	go.opentelemetry.io/otel/sdk/trace v1.28.0
 )
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod10/lab/lab10.zip)!
 
 </TabItem>
 <TabItem value="app">

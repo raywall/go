@@ -37,7 +37,10 @@
 }
 
 @media only screen and (max-width: 600px) {
-  --ifm-menu-color: #fff;
+  .theme-doc-sidebar-item-link .menu__link, .menu__link--active {
+    --ifm-menu-color: #fff;
+    --ifm-menu-color-active: #000;
+  }
 }
 .navbar__link {
   font-weight: var(--ifm-font-weight-normal);

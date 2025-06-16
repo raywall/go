@@ -40,6 +40,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod2/controle-if.go)!
+
 #### Comparação com Java:
 
 ##### Java
@@ -87,6 +89,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod2/controle-for.go)!
+
 ### `switch`
 
 - Mais simples que em Java: não precisa de break (não há fall-through por padrão)
@@ -120,6 +124,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod2/controle-switch.go)!
+
 ### `defer`
 
 - Adia a execução de uma instrução até o fim da função
@@ -137,6 +143,8 @@ func main() {
 	fmt.Println("Executado primeiro")
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod2/controle-defer.go)!
 
 :::info Caso de uso
 `defer` é usado para fechar arquivos, conexões de banco ou liberar mutexes
@@ -190,6 +198,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod2/slices.go)!
+
 :::info Nota
 Slices são passados por referência, mas o array subjacente pode ser copiado se modificado
 :::
@@ -223,6 +233,8 @@ func main() {
 	fmt.Println(m) // map[idade:42]
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod2/maps.go)!
 
 :::info Caso de uso
 Slices são ideais para listas dinâmicas (ex: lista de usuários), enquanto maps são úteis para associações rápidas (ex: cache de IDs para valores)
@@ -263,6 +275,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod2/structs.go)!
+
 #### Tags de struct
 
 - Usadas para metadados, como serialização JSON
@@ -290,6 +304,8 @@ func main() {
 	fmt.Println(string(jsonData)) // {"id":1,"nome":"Laptop"}
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod2/tags-de-struct.go)!
 
 ##### Comparação com Java
 
@@ -327,6 +343,8 @@ func incrementar(p *int) {
 	*p++
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod2/ponteiros.go)!
 
 ### Comparação com Java
 
@@ -483,6 +501,8 @@ func main() {
 	}
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod2/lab/crud.go)!
 
 #### Execute
 

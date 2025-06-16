@@ -147,6 +147,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod1/lab/hello-world.go)!
+
 - **package main**: Define o pacote principal, que gera um executável.
 - **import "fmt"**: Importa o pacote fmt para formatação e saída.
 - **func main()**: Função de entrada, equivalente ao public static void main em Java.
@@ -260,6 +262,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod1/funcoes.go)!
+
 :::info Caso de uso
 Funções com múltiplos retornos são úteis para tratamento de erros, como value, err := funcao().
 :::
@@ -320,6 +324,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod1/lab/hello-world.go)!
+
 ##### Execute
 
 ```bash
@@ -368,6 +374,8 @@ func troca(a, b string) (string, string) {
     return b, a
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod1/lab/vars.go)!
 
 ##### Execute
 

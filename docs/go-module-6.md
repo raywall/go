@@ -135,6 +135,8 @@ require (
 )
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod6/go.mod)!
+
 #### Comandos Principais
 
 - `go mod init`: Inicializa um módulo.
@@ -188,6 +190,8 @@ go 1.21
 require github.com/google/uuid v1.6.0
 replace github.com/google/uuid => ../uuid-fork
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod6/go-replace.mod)!
 
 ### Comparação com Java
 
@@ -249,6 +253,8 @@ lab6/
 └── models/
     └── produto.go
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod6/lab/lab6.zip)!
 
 </TabItem>
 <TabItem value="app">

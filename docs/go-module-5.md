@@ -46,6 +46,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod5/goroutines.go)!
+
 ### Saída (pode variar devido à concorrência)
 
 ```bash
@@ -104,6 +106,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod5/channel-unbuffered.go)!
+
 ##### Buffered channel
 
 ```go
@@ -120,6 +124,8 @@ func main() {
 	fmt.Println(<-ch) // Saída: 2
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod5/channel-buffered.go)!
 
 ### Comparação com Java
 
@@ -179,6 +185,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod5/select.go)!
+
 #### Saída
 
 ```bash
@@ -217,6 +225,8 @@ func main() {
 	fmt.Println("Todas as tarefas concluídas")
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod5/sync-waitgroup.go)!
 
 ### `sync.Mutex`
 
@@ -259,6 +269,8 @@ func main() {
 	fmt.Println("Valor final:", c.valor) // Saída: Valor final: 1000
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod5/sync-mutex.go)!
 
 :::info Caso de uso
 `select` é usado em sistemas reativos, `WaitGroup` em tarefas paralelas, e `Mutex` em acesso a recursos compartilhados, como contadores ou caches.
@@ -330,6 +342,8 @@ func main() {
 	}
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod5/pipeline.go)!
 
 :::info Caso de uso
 `Worker pools` são comuns em sistemas de alta carga, como servidores web ou processamento de lotes.
@@ -453,6 +467,8 @@ func main() {
 	logger.Info("Processamento concluído", "total_tarefas", numTarefas)
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod5/lab/workerpool.go)!
 
 ##### Execução
 

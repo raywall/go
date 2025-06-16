@@ -43,6 +43,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod3/funcao-multiplos-retornos.go)!
+
 :::info Caso de uso
 Funções com múltiplos retornos são comuns em Go para retornar um valor e um erro, substituindo o uso de exceções como em Java (`try-catch`).
 :::
@@ -71,6 +73,8 @@ func main() {
     fmt.Println(soma(3, 4)) // Saída: 7
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod3/funcao-anonima.go)!
 
 ### Closures
 
@@ -101,6 +105,8 @@ func main() {
     fmt.Println(c2()) // Saída: 1 (novo contador)
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod3/closures.go)!
 
 :::info Caso de uso
 Closures são úteis para manter estado em funções, como contadores ou geradores, sem a necessidade de `structs`.
@@ -142,6 +148,8 @@ func main() {
 	fmt.Println(p.Descricao()) // Saída: Laptop: R$900.00
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod3/metodos-em-structs.go)!
 
 ### Comparação com Java
 
@@ -201,6 +209,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod3/interfaces.go)!
+
 #### Comparação com Java
 
 - Em Java, interfaces exigem `implements`. Em Go, a implementação é implícita.
@@ -225,6 +235,8 @@ func inspecionar(v interface{}) {
     }
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod3/interface-vazia.go)!
 
 :::info Caso de uso
 Interfaces são amplamente usadas em Go para abstrair repositórios, serviços ou plugins, garantindo flexibilidade e testabilidade.
@@ -439,6 +451,8 @@ func main() {
 	exibirProdutos(repo)
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod3/lab/crud.go)!
 
 ##### Execução
 

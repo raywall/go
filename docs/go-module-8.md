@@ -40,6 +40,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod8/api-http.go)!
+
 #### Execução
 
 ```bash
@@ -108,6 +110,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod8/api-middleware.go)!
+
 #### Comparação com Java
 
 ##### Java
@@ -157,6 +161,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod8/api-gin-roteamento.go)!
+
 #### Binding e validação
 
 - Converte JSON ou formulários em `structs`, com `validação via tags`.
@@ -191,6 +197,8 @@ func main() {
     r.Run(":8080")
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod8/api-gin-binding-validacao.go)!
 
 ##### Comparação com Java:
 
@@ -245,6 +253,8 @@ func main() {
     r.Run(":8080")
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod8/api-gin-json.go)!
 
 ### Teste
 
@@ -309,7 +319,7 @@ go get github.com/go-playground/validator/v10
 3. Atualize o arquivo `go.mod`:
 
 ```go
-module github.com/seu-usuario/lab6
+module github.com/seu-usuario/lab8
 
 go 1.21
 
@@ -318,8 +328,9 @@ require (
 	github.com/go-playground/validator/v10 v10.22.0
 	github.com/google/uuid v1.6.0
 )
-
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod8/lab/lab8.zip)!
 
 </TabItem>
 <TabItem value="app">

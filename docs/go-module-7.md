@@ -41,6 +41,8 @@ func TestSoma(t *testing.T) {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod7/testing.go)!
+
 #### Execução
 
 ```bash
@@ -103,6 +105,8 @@ func TestSoma(t *testing.T) {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod7/teste-unitario.go)!
+
 ### Testes de integração
 
 - Testam a `interação entre componentes` (ex: repositório e API)
@@ -162,6 +166,8 @@ func TestServico(t *testing.T) {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod7/teste-mock.go)!
+
 ### Pacote `gomock`
 
 - **Gera mocks automaticamente** a partir de `interfaces`
@@ -200,6 +206,8 @@ func BenchmarkSoma(b *testing.B) {
 	}
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod7/benchmarks.go)!
 
 #### Execução
 
@@ -311,15 +319,7 @@ lab6/
 go get github.com/stretchr/testigy
 ```
 
-3. Crie um diretório para testes:
-
-```dirtree
-lab6/
-└── internal/
-    └── repo/
-        ├── memoria.go
-        └── memoria_test.go
-```
+> Para download do código-fonte, clique [aqui](@site/static/code/mod7/lab/lab7.zip)!
 
 </TabItem>
 <TabItem value="app">

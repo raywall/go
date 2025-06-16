@@ -71,7 +71,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/gopher-rocks-sm.svg',  
+    image: 'img/gopher-program.jpeg',
     navbar: {
       title: 'Let`s Go',
       logo: {

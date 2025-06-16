@@ -81,6 +81,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod4/error.go)!
+
 ### `fmt.Errorf`
 
 - Formata mensagens de erro dinamicamente, semelhante a `String.format` em Java.
@@ -96,6 +98,8 @@ func acessarIndice(slice []int, indice int) (int, error) {
     return slice[indice], nil
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod4/errorf.go)!
 
 :::info Caso de uso
 `errors.New` é usado para erros fixos, enquanto `fmt.Errorf` é ideal para erros com contexto dinâmico (ex: validação de entrada)
@@ -136,6 +140,8 @@ func processar(id int) error {
 
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod4/wrapping.go)!
+
 ### `errors.Is`
 
 - Verifica se um erro (ou seus erros encapsulados) corresponde a um erro específico.
@@ -151,6 +157,8 @@ func main() {
 	fmt.Println(err) // Saída: falha ao processar id 45: não encontrado
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod4/errors-is.go)!
 
 ### `errors.As`
 
@@ -187,6 +195,8 @@ func main() {
 	}
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod4/errors-as.go)!
 
 #### Comparação com Java:
 
@@ -226,6 +236,8 @@ func main() {
 }
 ```
 
+> Para download do código-fonte, clique [aqui](@site/static/code/mod4/log.go)!
+
 ### Pacote `log/slog` (Go 1.21+)
 
 - Oferece logging estruturado, com suporte a JSON e campos personalizados.
@@ -253,6 +265,8 @@ func main() {
 	logger.Error("Erro encontrado", "error", err, "id", 45)
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod4/slog.go)!
 
 #### Saída (JSON)
 
@@ -313,7 +327,7 @@ Refatorar o CRUD do Módulo 3 para incluir tratamento de erros robusto e logging
 
 #### Passo a passo
 
-1. Crie um arquivo crud.go com o seguinte código:
+1. Crie um arquivo `crud.go` com o seguinte código:
 
 ```go
 package main
@@ -489,6 +503,8 @@ func main() {
 	}
 }
 ```
+
+> Para download do código-fonte, clique [aqui](@site/static/code/mod4/lab/crud.go)!
 
 2. Execução:
 
