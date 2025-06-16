@@ -40,6 +40,10 @@ const config: Config = {
     [
       'classic',
       {
+        googleAnalytics: {
+          trackingID: "G-JTYKZ2TBVQ",
+          anonymiseIP: true,
+        },
         docs: {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
