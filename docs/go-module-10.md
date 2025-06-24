@@ -6,7 +6,7 @@ sidebar_label: Módulo 10
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Deploy, observabilidade e boas ppráticas em Go
+# Deploy, observabilidade e boas práticas em Go
 
 Este módulo aborda o _deploy de aplicações Go_, `observabilidade com logging`, `tracing` e `métricas`, e `boas práticas` para produção. Focado em engenheiros Java, compara com práticas do Spring Boot e ferramentas como `Prometheus`, com exemplos práticos e objetivos para consulta futura.
 
