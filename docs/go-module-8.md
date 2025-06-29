@@ -8,7 +8,19 @@ import TabItem from '@theme/TabItem';
 
 # Web APIs com `net/http` e `Gin` em Go
 
+<div className="row">
+<div className="col">
+
 Este módulo aborda a construção de `APIs RESTful` em Go, começando com o pacote padrão `net/http` e avançando para o framework `Gin`, que simplifica `roteamento`, `binding` e `validação`. O conteúdo é voltado para engenheiros Java, com comparações ao Spring Boot, e mantém-se objetivo com exemplos práticos e casos de uso para consulta futura.
+
+</div>
+<div className="col col--4 text--center">
+<img 
+    src={require('@site/static/img/gophers/gopher-study.png').default} 
+    style={{ transform:'scale(1.3)', marginTop:'-3rem' }}
+    alt="A diaper brown gopher" />
+</div>
+</div>
 
 O lab prático `implementa uma API RESTful` para o CRUD dos módulos anteriores, usando `Gin` com `validação de entrada`.
 
@@ -276,7 +288,9 @@ curl -X GET http://localhost:8080/api
 
 <br />
 
----
+<div className="text--right" style={{ background:'#6eb6e6', borderBottom:'3px solid #007d9c' }}>
+<img src={require('@site/static/img/gophers/gopher-background.png').default} style={{ width:'20rem',padding:'10px 0' }} alt="" />
+</div>
 
 ## Laboratório
 

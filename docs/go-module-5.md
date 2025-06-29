@@ -8,9 +8,21 @@ import TabItem from '@theme/TabItem';
 
 # Concorrência com goroutines e channels em Go
 
+<div className="row">
+<div className="col">
+
 Este módulo aborda a concorrência em Go, um dos pontos fortes da linguagem, com foco em `goroutines`, `channels`, e ferramentas de sincronização como `select`, `sync.WaitGroup` e `sync.Mutex`. Para engenheiros Java, a concorrência em Go é mais leve e idiomática do que `threads` e `ExecutorService`. O conteúdo é detalhado, mas objetivo, com exemplos e casos de uso para consulta futura.
 
 O lab prático implementa um `worker pool` para processamento concorrente de tarefas.
+
+</div>
+<div className="col col--4 text--center">
+<img 
+    src={require('@site/static/img/gophers/gopher-goroutines.png').default} 
+    style={{ marginTop:'-50px' }}
+    alt="A diaper brown gopher" />
+</div>
+</div>
 
 <br />
 
@@ -351,7 +363,9 @@ func main() {
 
 <br />
 
----
+<div className="text--right" style={{ background:'#6eb6e6', borderBottom:'3px solid #007d9c' }}>
+<img src={require('@site/static/img/gophers/gopher-background.png').default} style={{ width:'20rem',padding:'10px 0' }} alt="" />
+</div>
 
 ## Laboratório
 

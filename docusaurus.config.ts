@@ -112,10 +112,10 @@ const config: Config = {
           position: 'left',
           label: 'Aprenda Golang',
         },
-        {
-          type: 'localeDropdown',
-          position: 'left',
-        },
+        // {
+        //   type: 'localeDropdown',
+        //   position: 'right',
+        // },
         {
           href: 'https://github.com/raywall/go',
           label: 'GitHub',

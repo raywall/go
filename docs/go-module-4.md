@@ -8,9 +8,21 @@ import TabItem from '@theme/TabItem';
 
 # Tratamento de erros em Go
 
+<div className="row">
+<div className="col">
+
 Este módulo explora a abordagem de tratamento de erros em Go, que difere significativamente do modelo de exceções usado em Java. O foco está na filosofia de erros explícitos, no uso do tipo error, técnicas de `wrapping`/`unwrapping` e `logging estruturado`. O conteúdo é voltado para engenheiros Java, com exemplos práticos e casos de uso objetivos para consulta futura.
 
 O lab prático implementa funções com tratamento de erros e logging estruturado.
+
+</div>
+<div className="col col--4 text--center">
+<img 
+    src={require('@site/static/img/gophers/gopher-coffee.png').default} 
+    style={{ transform:'scale(0.8)', marginTop:'-65px' }}
+    alt="A diaper brown gopher" />
+</div>
+</div>
 
 <br />
 
@@ -286,7 +298,9 @@ func main() {
 
 <br />
 
----
+<div className="text--right" style={{ background:'#6eb6e6', borderBottom:'3px solid #007d9c' }}>
+<img src={require('@site/static/img/gophers/gopher-background.png').default} style={{ width:'20rem',padding:'10px 0' }} alt="" />
+</div>
 
 ## Laboratório
 

@@ -8,9 +8,21 @@ import TabItem from '@theme/TabItem';
 
 # Estruturas de controle e tipos compostos em Go
 
+<div className="row">
+<div className="col">
+
 Este módulo aprofunda os fundamentos do Go, abordando `estruturas de controle`, tipos compostos (`arrays`, `slices`, `maps`), `structs` e `ponteiros`. O conteúdo é voltado para engenheiros Java, com exemplos práticos e casos de uso objetivos, mantendo profundidade para consulta futura.
 
 O lab prático implementa uma API fake de CRUD, reforçando os conceitos aprendidos.
+
+</div>
+<div className="col col--4 text--center">
+<img 
+    src={require('@site/static/img/gophers/gopher-meeting.png').default} 
+    style={{ transform:'scalex(-1)', marginTop:'-10px' }}
+    alt="A diaper brown gopher" />
+</div>
+</div>
 
 <br />
 
@@ -357,7 +369,9 @@ Ponteiros são úteis para modificar structs grandes sem copiar dados, similar a
 
 <br />
 
----
+<div className="text--right" style={{ background:'#6eb6e6', borderBottom:'3px solid #007d9c' }}>
+<img src={require('@site/static/img/gophers/gopher-background.png').default} style={{ width:'20rem',padding:'10px 0' }} alt="" />
+</div>
 
 ## Laboratório
 

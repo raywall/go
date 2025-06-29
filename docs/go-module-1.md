@@ -6,9 +6,21 @@ sidebar_label: Módulo 01
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+<div className="row">
+<div className="col">
+
 # Introdução e fundamentos da linguagem Go
 
 Este módulo apresenta os conceitos fundamentais da linguagem Go, incluindo sua história, características, configuração do ambiente e elementos básicos da sintaxe. O objetivo é fornecer uma base sólida para engenheiros Java que desejam aprender Go, com exemplos práticos e casos de uso. O conteúdo é objetivo, mas detalhado, e pode ser refinado posteriormente.
+
+</div>
+<div className="col col--3 text--left">
+<img 
+    src={require('@site/static/img/gophers/gopher-baby.png').default} 
+    style={{ marginTop:'80px' }}
+    alt="A diaper brown gopher" />
+</div>
+</div>
 
 <br />
 
@@ -35,24 +47,57 @@ Go é amplamente usado em projetos como Kubernetes, Docker e sistemas de alta pe
 
 ## Características da linguagem
 
+<!-- SIMPLICIDADE -->
+<div className="row">
+<div className="col col--3 text--center">
+<img 
+    src={require('@site/static/img/gophers/gopher.png').default} 
+    style={{ transform:'scalex(-1) scale(0.7)', marginTop:'0px' }}
+    alt="A blue Go gopher" />
+</div>
+<div className="col">
 ### Simplicidade
 
 - Sintaxe reduzida, com poucas palavras-chave (25, contra 50+ em Java)
 - Formatação automática com go fmt
 - Ausência de recursos complexos como herança ou sobrecarga de métodos
+</div>
+</div>
 
+<!-- PERFORMANCE -->
+<div className="row">
+<div className="col col--3 text--center">
+<img 
+    src={require('@site/static/img/gophers/gopher-flash.png').default} 
+    style={{ marginTop:'20px' }}
+    alt="A gopher dressed in flash and running" />
+</div>
+<div className="col">
 ### Performance
 
 - Compilação para binário nativo, eliminando a necessidade de uma máquina virtual (diferente de Java)
 - Garbage collector otimizado para baixa latência
 - Execução rápida, ideal para serviços de alta carga
+</div>
+</div>
+
+<!-- CONCORRENCIA -->
+<div className="row">
+<div className="col col--3 text--center">
+<img 
+    src={require('@site/static/img/gophers/gopher-goroutines.png').default} 
+    style={{ transform:'scale(1)', marginTop:'5px' }}
+    alt="A super strong gopher with a tattoo gourthines written on the chest" />
+</div>
+<div className="col">
 
 ### Concorrência
 
 - **Goroutines**: Funções leves que executam concorrência de forma eficiente
 - **Channels**: Mecanismo para comunicação segura entre goroutines
 - Diferente do modelo de threads em Java, Go abstrai a complexidade do gerenciamento de concorrência
-
+</div>
+</div>
 :::info Caso de uso
 APIs RESTful e microsserviços, onde Go oferece alta performance e concorrência para lidar com múltiplas requisições simultâneas.
 :::
@@ -61,6 +106,9 @@ APIs RESTful e microsserviços, onde Go oferece alta performance e concorrência
 
 ## Instalação, workspace e `go mod`
 
+<!-- INSTALAÇÃO -->
+<div className="row">
+<div className="col">
 ### Instalação
 
 1. Baixe o Go em [go.dev](https://go.dev/dl/) para o seu sistema operacional
@@ -68,7 +116,14 @@ APIs RESTful e microsserviços, onde Go oferece alta performance e concorrência
 
 - **Linux ou Mac**: Descompacte o arquivo e adicione ao `$PATH`
 - **Windows**: Execute o instalador e verifique com go version
-
+</div>
+<div className="col col--4 text--center">
+<img 
+    src={require('@site/static/img/gophers/gopher-programmer.png').default} 
+    style={{ marginTop:'20px' }}
+    alt="A blue Go gopher" />
+</div>
+</div>
 :::tip Nota
 No sistema operacional `MacOS` também é possível instalar o Go utilizando o `brew install go`
 :::
@@ -83,6 +138,9 @@ go version
 
 ### Workspace
 
+<!-- WORKSPACE -->
+<div className="row">
+<div className="col">
 Go utiliza uma estrutura de diretórios para organizar projetos. A partir do Go 1.11, o Go Modules substituiu o antigo $GOPATH como padrão.
 
 #### Diretórios principais (opcional, com Go Modules)
@@ -90,6 +148,15 @@ Go utiliza uma estrutura de diretórios para organizar projetos. A partir do Go 
 - `src/` - Código-fonte
 - `bin/` - Binários compilados
 - `pkg/` - Pacotes compartilhados
+
+</div>
+<div className="col col--4 text--center">
+<img 
+    src={require('@site/static/img/gophers/gopher-programmer-2.png').default} 
+    style={{ transform:'scale(1.1)', marginTop:'20px' }}
+    alt="A blue Go gopher" />
+</div>
+</div>
 
 :::tip Nota
 Com Go Modules, você pode trabalhar em qualquer diretório
@@ -137,6 +204,9 @@ Um programa Go segue uma estrutura simples, com o pacote main como ponto de entr
 
 ### Exemplo
 
+<div className="row">
+<div className="col">
+
 ```go
 package main
 
@@ -148,6 +218,15 @@ func main() {
 ```
 
 > Para download do código-fonte, clique [aqui](@site/static/code/mod1/lab/hello-world.go)!
+
+</div>
+<div className="col col--4 text--center">
+<img 
+    src={require('@site/static/img/gophers/gopher-hello-world.png').default} 
+    style={{ transform:'scale(1)', marginTop:'-70px' }}
+    alt="A blue Go gopher" />
+</div>
+</div>
 
 - **package main**: Define o pacote principal, que gera um executável.
 - **import "fmt"**: Importa o pacote fmt para formatação e saída.
@@ -177,6 +256,9 @@ go build hello.go   # Compila para um binário
 
 Go possui tipos primitivos simples, com tipagem estática (semelhante a Java, mas mais concisa).
 
+<div className="row">
+<div className="col">
+
 |                   |                            |                        |
 | ----------------- | -------------------------- | ---------------------- |
 | Tipo              | Descrição                  | Exemplo                |
@@ -186,7 +268,15 @@ Go possui tipos primitivos simples, com tipagem estática (semelhante a Java, ma
 | string            | Cadeia de caracteres UTF-8 | "Hello, Go!"           |
 | byte              | Alias para uint8           | 65 (equivalente a ‘A’) |
 
-:::info Nota
+</div>
+<div className="col col--5 text--center">
+<img 
+    src={require('@site/static/img/gophers/gopher-primitive.png').default} 
+    style={{ transform:'scale(1.4)', marginTop:'10px' }}
+    alt="A blue Go gopher" />
+</div>
+</div>
+:::tip Nota
 Go não suporta tipos implícitos como var genérico em Java. A inferência de tipo é feita com :=.
 :::
 
@@ -270,7 +360,9 @@ Funções com múltiplos retornos são úteis para tratamento de erros, como val
 
 <br />
 
----
+<div className="text--right" style={{ background:'#6eb6e6', borderBottom:'3px solid #007d9c' }}>
+<img src={require('@site/static/img/gophers/gopher-background.png').default} style={{ width:'20rem',padding:'10px 0' }} alt="" />
+</div>
 
 ## Laboratório
 

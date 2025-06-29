@@ -8,9 +8,21 @@ import TabItem from '@theme/TabItem';
 
 # Deploy, observabilidade e boas ppráticas em Go
 
+<div className="row">
+<div className="col">
+
 Este módulo aborda o _deploy de aplicações Go_, `observabilidade com logging`, `tracing` e `métricas`, e `boas práticas` para produção. Focado em engenheiros Java, compara com práticas do Spring Boot e ferramentas como `Prometheus`, com exemplos práticos e objetivos para consulta futura.
 
 O lab prático containeriza a API CRUD dos módulos anteriores, configurando logging estruturado, tracing com `OpenTelemetry`, e exposição de métricas.
+
+</div>
+<div className="col col--3 text--left">
+<img 
+    src={require('@site/static/img/gophers/gopher-inspect.png').default} 
+    style={{ transform:'scalex(-1) scale(0.9)', marginTop:'-1rem' }}
+    alt="A diaper brown gopher" />
+</div>
+</div>
 
 <br />
 
@@ -334,7 +346,9 @@ func (r *Repositorio) Criar(nome string, preco float64) (models.Produto, error) 
 
 <br />
 
----
+<div className="text--right" style={{ background:'#6eb6e6', borderBottom:'3px solid #007d9c' }}>
+<img src={require('@site/static/img/gophers/gopher-background.png').default} style={{ width:'20rem',padding:'10px 0' }} alt="" />
+</div>
 
 ## Laboratório
 

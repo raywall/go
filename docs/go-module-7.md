@@ -8,7 +8,19 @@ import TabItem from '@theme/TabItem';
 
 # Testes e Qualidade de Código em Go
 
+<div className="row">
+<div className="col">
+
 Este módulo aborda testes e qualidade de código em Go, incluindo `testes unitários` e `testes de integração` com o pacote `testing`, uso de `mocks` com bibliotecas como `testify`, `benchmarks`, `profiling` e ferramentas de `análise estática`. O conteúdo é voltado para engenheiros Java, comparando com práticas como `JUnit` e `Mockito`, e mantendo-se objetivo para consulta futura.
+
+</div>
+<div className="col col--4 text--left">
+<img 
+    src={require('@site/static/img/gophers/gopher-schema.png').default} 
+    style={{ transform:'scale(0.8)', marginTop:'-1.1rem' }}
+    alt="A diaper brown gopher" />
+</div>
+</div>
 
 O lab prático implementa testes unitários e de integração para o CRUD dos módulos anteriores, com foco em `cobertura de erros`.
 
@@ -280,7 +292,9 @@ Essas ferramentas garantem consistência e qualidade em projetos grandes, como m
 
 <br />
 
----
+<div className="text--right" style={{ background:'#6eb6e6', borderBottom:'3px solid #007d9c' }}>
+<img src={require('@site/static/img/gophers/gopher-background.png').default} style={{ width:'20rem',padding:'10px 0' }} alt="" />
+</div>
 
 ## Laboratório
 
