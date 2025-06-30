@@ -8,9 +8,21 @@ import TabItem from '@theme/TabItem';
 
 # Funções, métodos e interfaces em Go
 
+<div className="row">
+<div className="col">
+
 Este módulo explora funções avançadas, métodos em structs, interfaces e boas práticas em Go, com foco em engenheiros Java que desejam adotar o estilo idiomático da linguagem. O conteúdo é detalhado, mas objetivo, com exemplos e casos de uso para consulta futura.
 
 O lab prático refatora o CRUD do [Módulo 02](go-module-2), introduzindo interfaces para repositórios.
+
+</div>
+<div className="col col--4 text--center">
+<img 
+    src={require('@site/static/img/gophers/gopher-flow.png').default} 
+    style={{ transform:'scale(1.1)', marginTop:'-10px' }}
+    alt="A diaper brown gopher" />
+</div>
+</div>
 
 <br />
 
@@ -285,7 +297,9 @@ Boas práticas garantem código legível e manutenível, especialmente em equipe
 
 <br />
 
----
+<div className="text--right" style={{ background:'#6eb6e6', borderBottom:'3px solid #007d9c' }}>
+<img src={require('@site/static/img/gophers/gopher-background.png').default} style={{ width:'20rem',padding:'10px 0' }} alt="" />
+</div>
 
 ## Laboratório
 

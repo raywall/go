@@ -8,7 +8,19 @@ import TabItem from '@theme/TabItem';
 
 # Testes e Qualidade de Código em Go
 
+<div className="row">
+<div className="col">
+
 Este módulo aborda testes e qualidade de código em Go, incluindo `testes unitários` e `testes de integração` com o pacote `testing`, uso de `mocks` com bibliotecas como `testify`, `benchmarks`, `profiling` e ferramentas de `análise estática`. O conteúdo é voltado para engenheiros Java, comparando com práticas como `JUnit` e `Mockito`, e mantendo-se objetivo para consulta futura.
+
+</div>
+<div className="col col--4 text--left">
+<img 
+    src={require('@site/static/img/gophers/gopher-schema.png').default} 
+    style={{ transform:'scale(0.8)', marginTop:'-1.1rem' }}
+    alt="A diaper brown gopher" />
+</div>
+</div>
 
 O lab prático implementa testes unitários e de integração para o CRUD dos módulos anteriores, com foco em `cobertura de erros`.
 
@@ -160,7 +172,7 @@ func TestServico(t *testing.T) {
 	}
 
     if resultado != "Produto" {
-		t.Errorf("esperado Produto, got %s", resultado)
+		t.Errorf("esperado Produto, recebido %s", resultado)
 	}
 	repo.AssertExpectations(t)
 }
@@ -280,7 +292,9 @@ Essas ferramentas garantem consistência e qualidade em projetos grandes, como m
 
 <br />
 
----
+<div className="text--right" style={{ background:'#6eb6e6', borderBottom:'3px solid #007d9c' }}>
+<img src={require('@site/static/img/gophers/gopher-background.png').default} style={{ width:'20rem',padding:'10px 0' }} alt="" />
+</div>
 
 ## Laboratório
 
@@ -337,7 +351,7 @@ Implementar testes unitários e de integração para o CRUD do [Módulo 06](go-m
 ```go
 import (
 	"github.com/google/uuid"
-	"github.com/seuusuario/labлог6/models"
+	"github.com/meu-usuario/labлог6/models"
 	"github.com/stretchr/testify/assert"
 	"log/slog"
 	"os"
@@ -378,7 +392,7 @@ func TestRepositorioEmMemoria(t *testing.T) {
 	t.Run("Listar produtos", func(t *testing.T) {
 		repo = NovoRepositorioEmMemoria(logger)
 		repo.Criar("Laptop", 999.99)
-		repo.Crir("Mouse", 29.99)
+		repo.Criar("Mouse", 29.99)
 
 		produtos, err := repo.Listar()
 		assert.NoError(t, err)
@@ -427,7 +441,7 @@ func TestRepositorioEmMemoria(t *testing.T) {
 package main
 
 import (
-	"github.com/seuusuario/lab6/internal/repo"
+	"github.com/meu-usuario/lab6/internal/repo"
 	"github.com/stretchr/testify/assert"
 	"log/slog"
 	"os"

@@ -8,9 +8,21 @@ import TabItem from '@theme/TabItem';
 
 # Estruturas de controle e tipos compostos em Go
 
+<div className="row">
+<div className="col">
+
 Este módulo aprofunda os fundamentos do Go, abordando `estruturas de controle`, tipos compostos (`arrays`, `slices`, `maps`), `structs` e `ponteiros`. O conteúdo é voltado para engenheiros Java, com exemplos práticos e casos de uso objetivos, mantendo profundidade para consulta futura.
 
-O lab prático implementa uma API fake de CRUD, reforçando os conceitos aprendidos.
+O lab prático implementa uma CRUD (Create, Read, Update e Delete) em memória, reforçando os conceitos aprendidos.
+
+</div>
+<div className="col col--4 text--center">
+<img 
+    src={require('@site/static/img/gophers/gopher-meeting.png').default} 
+    style={{ transform:'scalex(-1)', marginTop:'-10px' }}
+    alt="A diaper brown gopher" />
+</div>
+</div>
 
 <br />
 
@@ -59,7 +71,7 @@ if x := numero % 2; x == 0 { ... } // inicialização direta
 ### `for`
 
 - Única estrutura de laço em Go (não há `while` ou `do-while`)
-- Suporta três formas: tradicional, condição simples e infinito
+- Suporta três formas: `tradicional`, condição `simples` e `infinito`
 
 #### Exemplo
 
@@ -115,7 +127,7 @@ func main() {
     }
 
     // Switch com expressão
-    switch x := dia \* 2; x {
+    switch x := dia * 2; x {
     case 6:
         fmt.Println("Dia 3 dobrado")
     default:
@@ -200,7 +212,7 @@ func main() {
 
 > Para download do código-fonte, clique [aqui](@site/static/code/mod2/slices.go)!
 
-:::info Nota
+:::tip Nota
 Slices são passados por referência, mas o array subjacente pode ser copiado se modificado
 :::
 
@@ -320,7 +332,7 @@ Structs com tags são amplamente usadas em APIs REST para `serializar`/`deserial
 ## Ponteiros
 
 - Go suporta ponteiros para manipulação direta de memória, mas de forma segura
-- Declarados com `\*tipo` (endereço) e `&variavel` (referência)
+- Declarados com `*tipo` (endereço) e `&variavel` (referência)
 
 ### Exemplo
 
@@ -357,7 +369,9 @@ Ponteiros são úteis para modificar structs grandes sem copiar dados, similar a
 
 <br />
 
----
+<div className="text--right" style={{ background:'#6eb6e6', borderBottom:'3px solid #007d9c' }}>
+<img src={require('@site/static/img/gophers/gopher-background.png').default} style={{ width:'20rem',padding:'10px 0' }} alt="" />
+</div>
 
 ## Laboratório
 
@@ -390,11 +404,11 @@ go mod init github.com/seu-usuario/lab2
 </TabItem>
 <TabItem value="app">
 
-### Implementar uma API Fake para CRUD em Memória
+### Implementar as funções de um CRUD (Create, Read, Update e Delete) em memória
 
 #### Objetivo
 
-Criar uma API fake em Go que gerencia uma lista de produtos em memória, usando `slices`, `maps`, `structs` e `estruturas de controle`. O lab simula um CRUD (`Create`, `Read`, `Update`, `Delete`).
+Criar um CRUD capaz de gerenciar uma lista de produtos em memória, usando `slices`, `maps`, `structs` e `estruturas de controle`. O lab simula um CRUD (`Create`, `Read`, `Update`, `Delete`).
 
 #### Passo a passo
 
@@ -441,7 +455,7 @@ func buscarProduto(id int) (Produto, error) {
 		}
 	}
 
-	return Produto{}, errors.New("Produto não encontrado")
+	return Produto{}, errors.New("produto não encontrado")
 }
 
 // Update: Atualiza um produto
@@ -453,7 +467,7 @@ func atualizarProduto(id int, nome string, preco float64) (Produto, error) {
 		}
 	}
 
-	return Produto{}, errors.New("Produto não encontrado")
+	return Produto{}, errors.New("produto não encontrado")
 }
 
 // Delete: Remove um produto
@@ -464,7 +478,7 @@ func deletarProduto(id int) error {
 			return nil
 		}
 	}
-	return errors.New("Produto não encontrado")
+	return errors.New("produto não encontrado")
 }
 
 func main() {

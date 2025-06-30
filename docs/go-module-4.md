@@ -8,9 +8,21 @@ import TabItem from '@theme/TabItem';
 
 # Tratamento de erros em Go
 
+<div className="row">
+<div className="col">
+
 Este módulo explora a abordagem de tratamento de erros em Go, que difere significativamente do modelo de exceções usado em Java. O foco está na filosofia de erros explícitos, no uso do tipo error, técnicas de `wrapping`/`unwrapping` e `logging estruturado`. O conteúdo é voltado para engenheiros Java, com exemplos práticos e casos de uso objetivos para consulta futura.
 
 O lab prático implementa funções com tratamento de erros e logging estruturado.
+
+</div>
+<div className="col col--4 text--center">
+<img 
+    src={require('@site/static/img/gophers/gopher-coffee.png').default} 
+    style={{ transform:'scale(0.8)', marginTop:'-65px' }}
+    alt="A diaper brown gopher" />
+</div>
+</div>
 
 <br />
 
@@ -112,7 +124,7 @@ func acessarIndice(slice []int, indice int) (int, error) {
 ### Wrapping
 
 - Permite adicionar contexto a um erro, mantendo o erro original
-- Usado com o operador %w em `fmt.Errorf`
+- Usado com o operador `%w` em `fmt.Errorf`
 
 #### Exemplo
 
@@ -271,8 +283,8 @@ func main() {
 #### Saída (JSON)
 
 ```json
-    {"time":"2025-06-12T01:05:00Z","level":"INFO","msg":"Processando requisição","id":42,"metodo":"GET"}
-    {"time":"2025-06-12T01:05:00Z","level":"ERROR","msg":"Erro encontrado","error":"falha na operação","id":42}
+    {"time":"2025-06-12T01:05:00Z","level":"INFO","msg":"Processando requisição","id":45,"metodo":"GET"}
+    {"time":"2025-06-12T01:05:00Z","level":"ERROR","msg":"Erro encontrado","error":"falha na operação","id":45}
 ```
 
 #### Comparação com Java
@@ -286,7 +298,9 @@ func main() {
 
 <br />
 
----
+<div className="text--right" style={{ background:'#6eb6e6', borderBottom:'3px solid #007d9c' }}>
+<img src={require('@site/static/img/gophers/gopher-background.png').default} style={{ width:'20rem',padding:'10px 0' }} alt="" />
+</div>
 
 ## Laboratório
 

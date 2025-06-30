@@ -8,9 +8,21 @@ import TabItem from '@theme/TabItem';
 
 # Pacotes, módulos e organização do código em Go
 
+<div className="row">
+<div className="col">
+
 Este módulo explora a organização de código em Go, incluindo a estrutura idiomática de pacotes, convenções de projeto, gerenciamento de dependências com go mod, e boas práticas para engenheiros Java que estão aprendendo Go. O conteúdo é detalhado, mas objetivo, com exemplos e casos de uso para consulta futura.
 
 O lab prático reorganiza o CRUD dos módulos anteriores em múltiplos pacotes, utilizando go mod para gerenciar dependências.
+
+</div>
+<div className="col col--4 text--center">
+<img 
+    src={require('@site/static/img/gophers/gopher-dependencies.png').default} 
+    style={{ transform:'scale(0.65)', marginTop:'-65px' }}
+    alt="A diaper brown gopher" />
+</div>
+</div>
 
 <br />
 
@@ -125,7 +137,7 @@ Usar internal para proteger implementações de repositórios, enquanto cmd orga
 
 #### Exemplo de go.mod
 
-```go
+```text
 module github.com/seu-usuario/meu-projeto
 
 go 1.21
@@ -182,7 +194,7 @@ Go Modules simplificam o gerenciamento de dependências em projetos grandes, com
 
 ### Exemplo de `go.mod` com `replace`
 
-```go
+```text
 module github.com/seu-usuario/meu-projeto
 
 go 1.21
@@ -209,7 +221,9 @@ replace github.com/google/uuid => ../uuid-fork
 
 <br />
 
----
+<div className="text--right" style={{ background:'#6eb6e6', borderBottom:'3px solid #007d9c' }}>
+<img src={require('@site/static/img/gophers/gopher-background.png').default} style={{ width:'20rem',padding:'10px 0' }} alt="" />
+</div>
 
 ## Laboratório
 
@@ -475,9 +489,9 @@ go run cmd/api/main.go
 
 ### Tarefa
 
-- Adicione um pacote api com uma função que simule um endpoint HTTP (ex.: ListarProdutos retornando JSON).
-- Use replace no go.mod para testar uma versão local da biblioteca github.com/google/uuid.
-- Crie um pacote utils com uma função para validar preços (ex.: ValidarPreco).
+- Adicione um pacote api com uma função que simule um endpoint HTTP (ex.: `ListarProdutos` retornando JSON).
+- Use replace no `go.mod` para testar uma versão local da biblioteca `github.com/google/uuid`.
+- Crie um pacote utils com uma função para validar preços (ex.: `ValidarPreco`).
 
 #### Saída esperada
 
@@ -485,26 +499,26 @@ go run cmd/api/main.go
 
 ```bash
 Lista de produtos:
-ID: , Nome: Laptop, Preço: 999.99
-ID: , Nome: Mouse, Preço: 29.99
+ID: 1, Nome: Laptop, Preço: 999.99
+ID: 2, Nome: Mouse, Preço: 29.99
 
-Produto encontrado: {ID: Nome:Laptop Preco:999.99}
-Produto atualizado: {ID: Nome:Laptop Pro Preco:1299.99}
+Produto encontrado: {ID:1 Nome:Laptop Preco:999.99}
+Produto atualizado: {ID:1 Nome:Laptop Pro Preco:1299.99}
 Produto deletado com sucesso
 
 Lista de produtos:
-ID: , Nome: Mouse, Preço: 29.99
+ID:2 , Nome: Mouse, Preço: 29.99
 ```
 
 ##### Logs JSON (exemplo)
 
 ```json
-{"time":"2025-06-12T01:09:00Z","level":"INFO","msg":"Produto criado","id":"","nome":"Laptop","preco":999.99}
-{"time":"2025-06-12T01:09:00Z","level":"INFO","msg":"Produto criado","id":"","nome":"Mouse","preco":29.99}
+{"time":"2025-06-12T01:09:00Z","level":"INFO","msg":"Produto criado","id":"1","nome":"Laptop","preco":999.99}
+{"time":"2025-06-12T01:09:00Z","level":"INFO","msg":"Produto criado","id":"2","nome":"Mouse","preco":29.99}
 {"time":"2025-06-12T01:09:00Z","level":"INFO","msg":"Listando produtos","total":2}
-{"time":"2025-06-12T01:09:00Z","level":"INFO","msg":"Produto encontrado","id":""}
-{"time":"2025-06-12T01:09:00Z","level":"INFO","msg":"Produto atualizado","id":"","nome":"Laptop Pro","preco":1299.99}
-{"time":"2025-06-12T01:09:00Z","level":"INFO","msg":"Produto deletado","id":""}
+{"time":"2025-06-12T01:09:00Z","level":"INFO","msg":"Produto encontrado","id":"1"}
+{"time":"2025-06-12T01:09:00Z","level":"INFO","msg":"Produto atualizado","id":"1","nome":"Laptop Pro","preco":1299.99}
+{"time":"2025-06-12T01:09:00Z","level":"INFO","msg":"Produto deletado","id":"1"}
 {"time":"2025-06-12T01:09:00Z","level":"INFO","msg":"Listando produtos","total":1}
 ```
 

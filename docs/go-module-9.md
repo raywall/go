@@ -8,7 +8,19 @@ import TabItem from '@theme/TabItem';
 
 # Persistência com banco de dados em Go
 
+<div className="row">
+<div className="col">
+
 Este módulo aborda a persistência de dados em Go, usando o pacote padrão `database/sql`, o ORM `GORM`, migrações com `golang-migrate`, e _testes de integração com bancos de dados_. O conteúdo é voltado para engenheiros Java, com comparações ao Spring Data e Hibernate, e mantém-se objetivo com exemplos práticos e casos de uso.
+
+</div>
+<div className="col col--4 text--center">
+<img 
+    src={require('@site/static/img/gophers/gopher-sql.png').default} 
+    style={{ transform:'scale(0.85)', marginTop:'-1.5rem' }}
+    alt="A diaper brown gopher" />
+</div>
+</div>
 
 O lab prático implementa o CRUD dos módulos anteriores com persistência em `PostgreSQL`, incluindo _migrações e testes de integração_.
 
@@ -256,7 +268,9 @@ Testes de integração garantem que queries e mapeamentos funcionem corretamente
 
 <br />
 
----
+<div className="text--right" style={{ background:'#6eb6e6', borderBottom:'3px solid #007d9c' }}>
+<img src={require('@site/static/img/gophers/gopher-background.png').default} style={{ width:'20rem',padding:'10px 0' }} alt="" />
+</div>
 
 ## Laboratório
 
