@@ -19,7 +19,7 @@ const config: Config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/go/',
-
+  
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'raywall', // Usually your GitHub org/user name.
@@ -36,11 +36,11 @@ const config: Config = {
     locales: ['pt', 'en', 'es'],
     localeConfigs: {
       pt: {
-        label: 'Português',
+        label: 'Português (Brasil)',
         direction: 'ltr',
         htmlLang: 'pt-BR',
         calendar: 'gregory',
-        path: 'pt',
+        // baseUrl: '/en/go/',
       },
       en: {
         label: 'English',
@@ -52,7 +52,7 @@ const config: Config = {
       es: {
         label: 'Español',
         direction: 'ltr',
-        htmlLang: 'es',
+        htmlLang: 'es-ES',
         calendar: 'gregory',
         path: 'es',
       }
@@ -112,10 +112,10 @@ const config: Config = {
           position: 'left',
           label: 'Aprenda Golang',
         },
-        // {
-        //   type: 'localeDropdown',
-        //   position: 'right',
-        // },
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
         {
           href: 'https://github.com/raywall/go',
           label: 'GitHub',

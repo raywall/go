@@ -1,21 +1,21 @@
 ---
 sidebar_position: 2
-sidebar_label: Conteúdo programático
+sidebar_label: Program
 ---
 
-# Conteúdo programático
+# Program
 
-## [Módulo 01](go-module-1.md) – Introdução e fundamentos da linguagem
+## [Module 01](go-module-1.md) – Introduction and fundamentals of Go language
 
 <div className="row">
 <div className="col">
-- História e propósito do Go
-- Características da linguagem (simplicidade, performance, concorrência)
-- Instalação, workspace, `go mod`
-- Estrutura básica de um programa
-- Tipos primitivos, funções, variáveis, constantes
+- History and purpose of Go
+- Language features (simplicity, performance, concurrency)
+- Installation, workspace, `go mod`
+- Basic structure of a program
+- Primitive types, functions, variables, constants
 
-📌 Lab: Hello world, manipulação de variáveis e tipos, primeiro programa com `go run`.
+📌 Lab: Hello world, manipulation of variables and types, first program with `go run`.
 
 </div>
 <div className="col col--3 text--left" style={{ paddingTop: '8px' }}>
@@ -26,16 +26,16 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 02](go-module-2.md) – Estruturas de controle e tipos compostos
+## [Module 02](go-module-2.md) – Control structures and composite types
 
 <div className="row">
 <div className="col">
 - `if`, `for`, `switch`, `defer`
 - Arrays, slices, maps
-- Structs e tags de struct
-- Ponteiros (conceito e aplicação)
+- Structs and struct tags
+- Pointers (concept and application)
 
-📌 Lab: Implementar um CRUD (Create, Read, Update e Delete) em memória usando slices e maps.
+📌 Lab: Implement a CRUD (Create, Read, Update and Delete) in memory using slices and maps.
 
 </div>
 <div className="col col--3 text--left" style={{ paddingTop: '8px' }}>
@@ -47,17 +47,17 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 03](go-module-3.md) – Funções, métodos e interfaces
+## [Module 03](go-module-3.md) – Functions, methods and interfaces
 
 <div className="row">
 <div className="col">
-- Funções com múltiplos retornos
-- Funções anônimas e closures
-- Métodos em structs
-- Interfaces e duck typing
-- Boas práticas e princípios de design idiomático em Go
+- Returns with multiple functions
+- Anonymous and closure functions
+- Structs methods
+- Interfaces and duck typing
+- Best practices and principles of idiomatic design in GO
 
-📌 Lab: Refatorar o CRUD usando interfaces para repositórios.
+📌 Lab: Refactor CRUD using interfaces for repositories.
 
 </div>
 <div className="col col--3 text--left" style={{ paddingTop: '8px' }}>
@@ -69,17 +69,17 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 04](go-module-4.md) – Tratamento de erros
+## [Module 04](go-module-4.md) – Error handling
 
 <div className="row">
 <div className="col">
 
-- Filosofia do Go: erros explícitos
-- Padrão error, `errors.New`, `fmt.Errorf`
-- Wrapping e unwrapping com `errors.Is`, `errors.As`
-- Pacote `log` e `log/slog`
+- GO philosophy: explicit errors
+- Default error, `errors.New`, `fmt.Errorf`
+- Wrapping and unwrapping with `errors.Is`, `errors.As`
+- Packages `log` and `log/slog`
 
-📌 Lab: Criar funções com tratamento de erros e logging estruturado.
+📌 Lab: Create functions with structured errors and logging.
 
 </div>
 <div className="col col--3 text--left" style={{ paddingTop: '8px' }}>
@@ -91,17 +91,17 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 05](go-module-5.md) – Concorrência com goroutines e channels
+## [Module 05](go-module-5.md) – Concurrency with goroutines and channels
 
 <div className="row">
 <div className="col">
 
-- Goroutines: o que são e como usar
-- Channels (unbuffered, buffered)
+- Goroutines: what they are and how to use them
+- Channels (`unbuffered`, `buffered`)
 - `select`, `sync.WaitGroup`, `sync.Mutex`
-- Padrões de concorrência em Go
+- Competition patterns in GO
 
-📌 Lab: Criar um worker pool para processamento concorrente de tarefas.
+📌 Lab: Create a pool worker for competing task processing.
 
 </div>
 <div className="col col--3 text--left">
@@ -114,17 +114,17 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 06](go-module-6.md) – Pacotes, módulos e organização do código
+## [Module 06](go-module-6.md) – Packages, modules and code organization
 
 <div className="row">
 <div className="col">
 
-- Estrutura de pacotes idiomática
-- Convenções de projeto (`cmd`, `internal`, `pkg`)
-- `go mod` e versionamento
-- Gerenciamento de dependências com `go get`, `replace`
+- Idiomatic package structure
+- Design conventions (`cmd`, `internal`, `pkg`)
+- `go mod` and versioning
+- Dependency management with `go get`, `replace`
 
-📌 Lab: Organizar o projeto CRUD em múltiplos pacotes com `go mod`.
+📌 Lab: Organize CRUD project into multiple packages with `go mod`.
 
 </div>
 <div className="col col--3 text--left">
@@ -137,18 +137,18 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 07](go-module-7.md) – Testes e qualidade de código
+## [Module 07](go-module-7.md) – Testing and code quality
 
 <div className="row">
 <div className="col">
 
-- Testes com testing
-- Testes de unidade e integração
-- Testes com mocks (`testify`, `gomock`)
-- Benchmarks e profiling
-- Ferramentas: `go vet`, `golint`, `staticcheck`
+- Testing with testing
+- Unit and integration tests
+- Testing with mocks (`testify`, `gomock`)
+- Benchmarks and profiling
+- Tools: `go vet`, `golint` and `staticcheck`
 
-📌 Lab: Criar testes unitários e de integração para o CRUD com cobertura de erro.
+📌 Lab: Create unit and integration tests for CRUD with error coverage.
 
 </div>
 <div className="col col--3 text--left">
@@ -161,17 +161,17 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 08](go-module-8.md) – Web APIs com net/http e Gin
+## [Module 08](go-module-8.md) – Web APIs with net/http and Gin
 
 <div className="row">
 <div className="col">
 
-- Servidor HTTP com `net/http`
-- Middlewares e handlers
-- Framework Gin: `roteamento`, `binding`, `validação`
-- JSON, status codes e headers
+- HTTP server with `net/http`
+- Middlewares and handlers
+- Gin framework: `routing`, `binding`, `validation`
+- JSON, status codes and headers
 
-📌 Lab: Implementar uma API RESTful com Gin + validação.
+📌 Lab: Implement a RESTful API with Gin + validation.
 
 </div>
 <div className="col col--3 text--left">
@@ -184,17 +184,17 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 09](go-module-9.md) – Persistência com banco de dados
+## [Module 09](go-module-9.md) – Database persistence
 
 <div className="row">
 <div className="col">
 
-- Drivers e `database/sql`
-- ORM com `gorm`
-- Migrations com `golang-migrate`
-- Repositórios e testes de integração com DB
+- Drivers and `database/sql`
+- ORM with `gorm`
+- Migrations with `golang-migrate`
+- Repositories and integration tests with DB
 
-📌 Lab: Persistir o CRUD em banco real (PostgreSQL por exemplo).
+📌 Lab: Persist CRUD in a real database (PostgreSQL for example).
 
 </div>
 <div className="col col--3 text--left">
@@ -207,18 +207,18 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 10](go-module-10.md) – Deploy, observabilidade e boas práticas
+## [Module 10](go-module-10.md) – Deployment, observability and best practices
 
 <div className="row">
 <div className="col">
 
-- Build com `go build`, cross-compilation
-- Docker com Go
-- Logging estruturado (`slog`, `zap`)
-- Tracing com OpenTelemetry
-- `Linter`, cobertura, documentação automática com `godoc`
+- Build with `go build`, cross-compilation
+- Docker with Go
+- Structured logging (`slog`, `zap`)
+- Tracing with OpenTelemetry
+- `Linter`, coverage, automatic documentation with `godoc`
 
-📌 Lab: Containerizar o serviço e expor métricas/trace/logs.
+📌 Lab: Containerize the service and expose metrics/trace/logs.
 
 </div>
 <div className="col col--3 text--left">
@@ -226,6 +226,5 @@ sidebar_label: Conteúdo programático
     src={require('@site/static/img/gophers/gopher-inspect.png').default}
     style={{ transform:'scalex(-1) scale(0.9)', marginTop:'-15px' }}
     alt="A blue gopher with detective hat by analyzing a note with a magnifying glass" />
-
 </div>
 </div>

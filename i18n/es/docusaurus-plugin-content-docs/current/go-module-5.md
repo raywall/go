@@ -6,6 +6,10 @@ sidebar_label: Módulo 05
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+:::warning Atención
+Este contenido aún no está traducido
+:::
+
 # Concorrência com goroutines e channels em Go
 
 <div className="row">
@@ -18,9 +22,9 @@ O lab prático implementa um `worker pool` para processamento concorrente de tar
 </div>
 <div className="col col--4 text--center">
 <img 
-    src={require('@site/static/img/gophers/gopher-goroutines.png').default} 
-    style={{ marginTop:'-50px' }}
-    alt="A diaper brown gopher" />
+	src={require('@site/static/img/gophers/gopher-goroutines.png').default} 
+	style={{ marginTop:'-50px' }}
+	alt="A diaper brown gopher" />
 </div>
 </div>
 
@@ -113,7 +117,7 @@ func main() {
 		ch <- "Mensagem da goroutine"
 	}()
 
-    msg := <-ch      // Bloqueia até receber
+	msg := <-ch      // Bloqueia até receber
 	fmt.Println(msg) // Saída: Mensagem da goroutine
 }
 ```
@@ -132,7 +136,7 @@ func main() {
 	ch <- 1
 	ch <- 2
 
-    fmt.Println(<-ch) // Saída: 1
+	fmt.Println(<-ch) // Saída: 1
 	fmt.Println(<-ch) // Saída: 2
 }
 ```
@@ -176,17 +180,17 @@ func main() {
 	ch1 := make(chan string)
 	ch2 := make(chan string)
 
-    go func() {
+	go func() {
 		time.Sleep(1 * time.Second)
 		ch1 <- "Canal 1"
 	}()
 
-    go func() {
+	go func() {
 		time.Sleep(2 * time.Second)
 		ch2 <- "Canal 2"
 	}()
 
-    for i := 0; i < 2; i++ {
+	for i := 0; i < 2; i++ {
 		select {
 		case msg1 := <-ch1:
 			fmt.Println("Recebido:", msg1)
@@ -233,7 +237,7 @@ func main() {
 		go tarefa(i, &wg)
 	}
 
-    wg.Wait()
+	wg.Wait()
 	fmt.Println("Todas as tarefas concluídas")
 }
 ```
@@ -277,7 +281,7 @@ func main() {
 		}()
 	}
 
-    wg.Wait()
+	wg.Wait()
 	fmt.Println("Valor final:", c.valor) // Saída: Valor final: 1000
 }
 ```
@@ -323,33 +327,33 @@ import "fmt"
 func gerar(nums ...int) chan int {
 	out := make(chan int)
 
-    go func() {
+	go func() {
 		for _, n := range nums {
 			out <- n
 		}
 		close(out)
 	}()
 
-    return out
+	return out
 }
 func dobrar(in chan int) chan int {
 	out := make(chan int)
 
-    go func() {
+	go func() {
 		for n := range in {
 			out <- n * 2
 		}
 		close(out)
 	}()
 
-    return out
+	return out
 }
 
 func main() {
 	entrada := gerar(1, 2, 3)
 	saida := dobrar(entrada)
 
-    for n := range saida {
+	for n := range saida {
 		fmt.Println(n) // Saída: 2, 4, 6
 	}
 }
@@ -446,19 +450,19 @@ func main() {
 	// Configurar logger
 	logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
 
-    // Canais para tarefas e resultados
+	// Canais para tarefas e resultados
 	tarefas := make(chan Tarefa, 10)
 	resultados := make(chan Resultado, 10)
 	var wg sync.WaitGroup
 
-    // Iniciar 3 workers
+	// Iniciar 3 workers
 	numWorkers := 3
 	for i := 1; i <= numWorkers; i++ {
 		wg.Add(1)
 		go worker(i, tarefas, resultados, &wg, logger)
 	}
 
-    // Enviar tarefas
+	// Enviar tarefas
 	numTarefas := 5
 	go func() {
 		for i := 1; i <= numTarefas; i++ {
@@ -468,13 +472,13 @@ func main() {
 		close(tarefas)
 	}()
 
-    // Coletar resultados
+	// Coletar resultados
 	go func() {
 		wg.Wait()
 		close(resultados)
 	}()
 
-    // Exibir resultados
+	// Exibir resultados
 	for r := range resultados {
 		fmt.Printf("Tarefa %d: Quadrado = %d\n", r.ID, r.Quadrado)
 	}

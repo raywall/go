@@ -6,6 +6,10 @@ sidebar_label: Módulo 02
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+:::warning Atención
+Este contenido aún no está traducido
+:::
+
 # Estruturas de controle e tipos compostos em Go
 
 <div className="row">
@@ -18,9 +22,9 @@ O lab prático implementa uma CRUD (Create, Read, Update e Delete) em memória, 
 </div>
 <div className="col col--4 text--center">
 <img 
-    src={require('@site/static/img/gophers/gopher-meeting.png').default} 
-    style={{ transform:'scalex(-1)', marginTop:'-10px' }}
-    alt="A diaper brown gopher" />
+	src={require('@site/static/img/gophers/gopher-meeting.png').default} 
+	style={{ transform:'scalex(-1)', marginTop:'-10px' }}
+	alt="A diaper brown gopher" />
 </div>
 </div>
 
@@ -116,23 +120,23 @@ package main
 import "fmt"
 
 func main() {
-    dia := 3
-    switch dia {
-        case 1, 2:
-            fmt.Println("Início da semana")
-        case 3, 4, 5:
-            fmt.Println("Meio da semana")
-        default:
-            fmt.Println("Fim de semana")
-    }
+	dia := 3
+	switch dia {
+		case 1, 2:
+			fmt.Println("Início da semana")
+		case 3, 4, 5:
+			fmt.Println("Meio da semana")
+		default:
+			fmt.Println("Fim de semana")
+	}
 
-    // Switch com expressão
-    switch x := dia * 2; x {
-    case 6:
-        fmt.Println("Dia 3 dobrado")
-    default:
-        fmt.Println("Outro valor")
-    }
+	// Switch com expressão
+	switch x := dia * 2; x {
+	case 6:
+		fmt.Println("Dia 3 dobrado")
+	default:
+		fmt.Println("Outro valor")
+	}
 }
 ```
 
@@ -536,16 +540,16 @@ go run crud.go
 #### Saída esperada
 
 ```bash
-    Lista de produtos:
-    ID: 1, Nome: Laptop, Preço: 999.99
-    ID: 2, Nome: Mouse, Preço: 29.99
+	Lista de produtos:
+	ID: 1, Nome: Laptop, Preço: 999.99
+	ID: 2, Nome: Mouse, Preço: 29.99
 
-    Produto encontrado: {ID:1 Nome:Laptop Preco:999.99}
-    Produto atualizado: {ID:1 Nome:Laptop Pro Preco:1299.99}
-    Produto deletado com sucesso
+	Produto encontrado: {ID:1 Nome:Laptop Preco:999.99}
+	Produto atualizado: {ID:1 Nome:Laptop Pro Preco:1299.99}
+	Produto deletado com sucesso
 
-    Lista final:
-    ID: 1, Nome: Laptop Pro, Preço: 1299.99
+	Lista final:
+	ID: 1, Nome: Laptop Pro, Preço: 1299.99
 ```
 
 :::info Caso de uso prático

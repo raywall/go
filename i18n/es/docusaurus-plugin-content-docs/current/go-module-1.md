@@ -6,6 +6,10 @@ sidebar_label: Módulo 01
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+:::warning Atención
+Este contenido aún no está traducido
+:::
+
 <div className="row">
 <div className="col">
 

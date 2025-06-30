@@ -6,6 +6,10 @@ sidebar_label: Módulo 07
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+:::warning Atención
+Este contenido aún no está traducido
+:::
+
 # Testes e Qualidade de Código em Go
 
 <div className="row">
@@ -16,9 +20,9 @@ Este módulo aborda testes e qualidade de código em Go, incluindo `testes unit�
 </div>
 <div className="col col--4 text--left">
 <img 
-    src={require('@site/static/img/gophers/gopher-schema.png').default} 
-    style={{ transform:'scale(0.8)', marginTop:'-1.1rem' }}
-    alt="A diaper brown gopher" />
+	src={require('@site/static/img/gophers/gopher-schema.png').default} 
+	style={{ transform:'scale(0.8)', marginTop:'-1.1rem' }}
+	alt="A diaper brown gopher" />
 </div>
 </div>
 
@@ -166,12 +170,12 @@ func TestServico(t *testing.T) {
 	repo := &RepositorioMock{}
 	repo.On("Buscar", 1).Return("Produto", nil)
 
-    resultado, err := repo.Buscar(1)
+	resultado, err := repo.Buscar(1)
 	if err != nil {
 		t.Fatal(err)
 	}
 
-    if resultado != "Produto" {
+	if resultado != "Produto" {
 		t.Errorf("esperado Produto, recebido %s", resultado)
 	}
 	repo.AssertExpectations(t)

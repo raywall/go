@@ -1,0 +1,18 @@
+{
+  "title": {
+    "message": "Let`s Go",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Gopher",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Aprenda Golang": {
+    "message": "Aprenda Golang",
+    "description": "Navbar item with label Aprenda Golang"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

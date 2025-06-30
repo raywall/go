@@ -6,6 +6,10 @@ sidebar_label: Módulo 08
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+:::warning Atención
+Este contenido aún no está traducido
+:::
+
 # Web APIs com `net/http` e `Gin` em Go
 
 <div className="row">
@@ -16,9 +20,9 @@ Este módulo aborda a construção de `APIs RESTful` em Go, começando com o pac
 </div>
 <div className="col col--4 text--center">
 <img 
-    src={require('@site/static/img/gophers/gopher-study.png').default} 
-    style={{ transform:'scale(1.3)', marginTop:'-3rem' }}
-    alt="A diaper brown gopher" />
+	src={require('@site/static/img/gophers/gopher-study.png').default} 
+	style={{ transform:'scale(1.3)', marginTop:'-3rem' }}
+	alt="A diaper brown gopher" />
 </div>
 </div>
 
@@ -48,7 +52,7 @@ func main() {
 		fmt.Fprint(w, "Hello, World!")
 	})
 
-    http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":8080", nil)
 }
 ```
 
@@ -106,7 +110,7 @@ func loggingMiddleware(next http.Handler) http.Handler {
 		start := time.Now()
 		log.Printf("Started %s %s", r.Method, r.URL.Path)
 
-        next.ServeHTTP(w, r)
+		next.ServeHTTP(w, r)
 		log.Printf("Completed in %v", time.Since(start))
 	})
 }
@@ -117,7 +121,7 @@ func main() {
 		w.Write([]byte("Hello, World!"))
 	})
 
-    mux.Handle("/", loggingMiddleware(mux))
+	mux.Handle("/", loggingMiddleware(mux))
 	http.ListenAndServe(":8080", nil)
 }
 ```
@@ -169,7 +173,7 @@ func main() {
 		c.JSON(http.StatusOK, gin.H{"mensagem": "Olá, " + nome})
 	})
 
-    r.Run(":8080")
+	r.Run(":8080")
 }
 ```
 
@@ -206,7 +210,7 @@ func main() {
 		c.JSON(http.StatusCreated, p)
 	})
 
-    r.Run(":8080")
+	r.Run(":8080")
 }
 ```
 
@@ -262,7 +266,7 @@ func main() {
 		})
 	})
 
-    r.Run(":8080")
+	r.Run(":8080")
 }
 ```
 
@@ -412,13 +416,13 @@ func (r *RepositorioEmMemoria) Criar(nome string, preco float64) (models.Produto
 	if preco < 0 {
 		r.logger.Error("Falha ao criar produto", "error", ErrPrecoInvalido, "nome", nome)
 
-        return models.Produto{}, ErrPrecoInvalido
+		return models.Produto{}, ErrPrecoInvalido
 	}
 
-    id := uuid.New()
+	id := uuid.New()
 	produto := models.Produto{ID: id, Nome: nome, Preco: preco}
 
-    r.produtos[id] = produto
+	r.produtos[id] = produto
 	r.logger.Info("Produto criado", "id", id, "nome", nome, "preco", preco)
 	return produto, nil
 }
@@ -428,10 +432,10 @@ func (r *RepositorioEmMemoria) Buscar(id uuid.UUID) (models.Produto, error) {
 	if !existe {
 		r.logger.Error("Falha ao buscar produto", "error", ErrProdutoNaoEncontrado, "id", id)
 
-        return models.Produto{}, fmt.Errorf("buscar produto id %s: %w", id, ErrProdutoNaoEncontrado)
+		return models.Produto{}, fmt.Errorf("buscar produto id %s: %w", id, ErrProdutoNaoEncontrado)
 	}
 
-    r.logger.Info("Produto encontrado", "id", id)
+	r.logger.Info("Produto encontrado", "id", id)
 	return produto, nil
 }
 
@@ -441,7 +445,7 @@ func (r *RepositorioEmMemoria) Listar() ([]models.Produto, error) {
 		produtos = append(produtos, p)
 	}
 
-    r.logger.Info("Listando produtos", "total", len(produtos))
+	r.logger.Info("Listando produtos", "total", len(produtos))
 	return produtos, nil
 }
 
@@ -449,20 +453,20 @@ func (r *RepositorioEmMemoria) Atualizar(id uuid.UUID, nome string, preco float6
 	if preco < 0 {
 		r.logger.Error("Falha ao atualizar produto", "error", ErrPrecoInvalido, "id", id)
 
-        return models.Produto{}, ErrPrecoInvalido
+		return models.Produto{}, ErrPrecoInvalido
 	}
 
-    produto, existe := r.produtos[id]
+	produto, existe := r.produtos[id]
 	if !existe {
 		r.logger.Error("Falha ao atualizar produto", "error", ErrProdutoNaoEncontrado, "id", id)
 
-        return models.Produto{}, fmt.Errorf("atualizar produto id %s: %w", id, ErrProdutoNaoEncontrado)
+		return models.Produto{}, fmt.Errorf("atualizar produto id %s: %w", id, ErrProdutoNaoEncontrado)
 	}
 
-    produto.Nome = nome
+	produto.Nome = nome
 	produto.Preco = preco
 
-    r.produtos[id] = produto
+	r.produtos[id] = produto
 	r.logger.Info("Produto atualizado", "id", id, "nome", nome, "preco", preco)
 	return produto, nil
 }
@@ -471,13 +475,13 @@ func (r *RepositorioEmMemoria) Deletar(id uuid.UUID) error {
 	if _, existe := r.produtos[id]; !existe {
 		r.logger.Error("Falha ao deletar produto", "error", ErrProdutoNaoEncontrado, "id", id)
 
-        return fmt.Errorf("deletar produto id %s: %w", id, ErrProdutoNaoEncontrado)
+		return fmt.Errorf("deletar produto id %s: %w", id, ErrProdutoNaoEncontrado)
 	}
 
-    delete(r.produtos, id)
+	delete(r.produtos, id)
 	r.logger.Info("Produto deletado", "id", id)
 
-    return nil
+	return nil
 }
 ```
 
@@ -505,7 +509,7 @@ func main() {
 		start := time.Now()
 		c.Next()
 
-        logger.Info("Requisição processada",
+		logger.Info("Requisição processada",
 			"method", c.Request.Method,
 			"path", c.Request.URL.Path,
 			"status", c.Writer.Status(),
@@ -522,7 +526,7 @@ func main() {
 				return
 			}
 
-            produto, err := repo.Criar(p.Nome, p.Preco)
+			produto, err := repo.Criar(p.Nome, p.Preco)
 			if err != nil {
 				c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 				return
@@ -546,7 +550,7 @@ func main() {
 				return
 			}
 
-            produto, err := repo.Buscar(id)
+			produto, err := repo.Buscar(id)
 			if err != nil {
 				c.JSON(http.StatusNotFound, gin.H{"error": err.Error()})
 				return
@@ -561,18 +565,18 @@ func main() {
 				return
 			}
 
-            var p models.Produto
+			var p models.Produto
 			if err := c.ShouldBindJSON(&p); err != nil {
 				c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 				return
 			}
 
-            produto, err := repo.Atualizar(id, p.Nome, p.Preco)
+			produto, err := repo.Atualizar(id, p.Nome, p.Preco)
 			if err != nil {
 				c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 				return
 			}
-            c.JSON(http.StatusOK, produto)
+			c.JSON(http.StatusOK, produto)
 		})
 
 		produtos.DELETE("/:id", func(c *gin.Context) {
@@ -582,11 +586,11 @@ func main() {
 				return
 			}
 
-            if err := repo.Deletar(id); err != nil {
+			if err := repo.Deletar(id); err != nil {
 				c.JSON(http.StatusNotFound, gin.H{"error": err.Error()})
 				return
 			}
-            c.Status(http.StatusNoContent)
+			c.Status(http.StatusNoContent)
 		})
 	}
 

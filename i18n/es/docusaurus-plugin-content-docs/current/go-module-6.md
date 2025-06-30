@@ -6,6 +6,10 @@ sidebar_label: Módulo 06
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+:::warning Atención
+Este contenido aún no está traducido
+:::
+
 # Pacotes, módulos e organização do código em Go
 
 <div className="row">
@@ -18,9 +22,9 @@ O lab prático reorganiza o CRUD dos módulos anteriores em múltiplos pacotes, 
 </div>
 <div className="col col--4 text--center">
 <img 
-    src={require('@site/static/img/gophers/gopher-dependencies.png').default} 
-    style={{ transform:'scale(0.65)', marginTop:'-65px' }}
-    alt="A diaper brown gopher" />
+	src={require('@site/static/img/gophers/gopher-dependencies.png').default} 
+	style={{ transform:'scale(0.65)', marginTop:'-65px' }}
+	alt="A diaper brown gopher" />
 </div>
 </div>
 
@@ -143,7 +147,7 @@ module github.com/seu-usuario/meu-projeto
 go 1.21
 
 require (
-    github.com/google/uuid v1.6.0
+	github.com/google/uuid v1.6.0
 )
 ```
 
@@ -345,7 +349,7 @@ func (r *RepositorioEmMemoria) Criar(nome string, preco float64) (models.Produto
 		return models.Produto{}, ErrPrecoInvalido
 	}
 
-    id := uuid.New()
+	id := uuid.New()
 	produto := models.Produto{ID: id, Nome: nome, Preco: preco}
 	r.produtos[id] = produto
 	r.logger.Info("Produto criado", "id", id, "nome", nome, "preco", preco)
@@ -359,7 +363,7 @@ func (r *RepositorioEmMemoria) Buscar(id uuid.UUID) (models.Produto, error) {
 		return models.Produto{}, fmt.Errorf("buscar produto id %s: %w", id, ErrProdutoNaoEncontrado)
 	}
 
-    r.logger.Info("Produto encontrado", "id", id)
+	r.logger.Info("Produto encontrado", "id", id)
 	return produto, nil
 }
 
@@ -369,7 +373,7 @@ func (r *RepositorioEmMemoria) Listar() ([]models.Produto, error) {
 		produtos = append(produtos, p)
 	}
 
-    r.logger.Info("Listando produtos", "total", len(produtos))
+	r.logger.Info("Listando produtos", "total", len(produtos))
 	return produtos, nil
 }
 
@@ -379,16 +383,16 @@ func (r *RepositorioEmMemoria) Atualizar(id uuid.UUID, nome string, preco float6
 		return models.Produto{}, ErrPrecoInvalido
 	}
 
-    produto, existe := r.produtos[id]
+	produto, existe := r.produtos[id]
 	if !existe {
 		r.logger.Error("Falha ao atualizar produto", "error", ErrProdutoNaoEncontrado, "id", id)
 		return models.Produto{}, fmt.Errorf("atualizar produto id %s: %w", id, ErrProdutoNaoEncontrado)
 	}
 
-    produto.Nome = nome
+	produto.Nome = nome
 	produto.Preco = preco
 
-    r.produtos[id] = produto
+	r.produtos[id] = produto
 	r.logger.Info("Produto atualizado", "id", id, "nome", nome, "preco", preco)
 	return produto, nil
 }
@@ -399,7 +403,7 @@ func (r *RepositorioEmMemoria) Deletar(id uuid.UUID) error {
 		return fmt.Errorf("deletar produto id %s: %w", id, ErrProdutoNaoEncontrado)
 	}
 
-    delete(r.produtos, id)
+	delete(r.produtos, id)
 	r.logger.Info("Produto deletado", "id", id)
 	return nil
 }
@@ -424,7 +428,7 @@ func exibirProdutos(repo repo.RepositorioProdutos) error {
 		return fmt.Errorf("exibir produtos: %w", err)
 	}
 
-    fmt.Println("Lista de produtos:")
+	fmt.Println("Lista de produtos:")
 	for _, p := range produtos {
 		fmt.Printf("ID: %s, Nome: %s, Preço: %.2f\n", p.ID, p.Nome, p.Preco)
 	}
@@ -435,7 +439,7 @@ func main() {
 	logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
 	repo := repo.NovoRepositorioEmMemoria(logger)
 
-    // Criar produtos
+	// Criar produtos
 	p1, err := repo.Criar("Laptop", 999.99)
 	if err != nil {
 		fmt.Println("Erro:", err)
@@ -443,34 +447,34 @@ func main() {
 	}
 	repo.Criar("Mouse", 29.99)
 
-    // Listar produtos
+	// Listar produtos
 	if err := exibirProdutos(repo); err != nil {
 		fmt.Println("Erro:", err)
 		return
 	}
 
-    // Buscar produto
+	// Buscar produto
 	if p, err := repo.Buscar(p1.ID); err == nil {
 		fmt.Printf("Produto encontrado: %+v\n", p)
 	} else {
 		fmt.Println("Erro:", err)
 	}
 
-    // Atualizar produto
+	// Atualizar produto
 	if p, err := repo.Atualizar(p1.ID, "Laptop Pro", 1299.99); err == nil {
 		fmt.Printf("Produto atualizado: %+v\n", p)
 	} else {
 		fmt.Println("Erro:", err)
 	}
 
-    // Deletar produto
+	// Deletar produto
 	if err := repo.Deletar(p1.ID); err == nil {
 		fmt.Println("Produto deletado com sucesso")
 	} else {
 		fmt.Println("Erro:", err)
 	}
 
-    // Listar novamente
+	// Listar novamente
 	if err := exibirProdutos(repo); err != nil {
 		fmt.Println("Erro:", err)
 	}

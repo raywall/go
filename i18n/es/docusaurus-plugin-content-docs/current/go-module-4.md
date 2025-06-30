@@ -6,6 +6,10 @@ sidebar_label: Módulo 04
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+:::warning Atención
+Este contenido aún no está traducido
+:::
+
 # Tratamento de erros em Go
 
 <div className="row">
@@ -18,9 +22,9 @@ O lab prático implementa funções com tratamento de erros e logging estruturad
 </div>
 <div className="col col--4 text--center">
 <img 
-    src={require('@site/static/img/gophers/gopher-coffee.png').default} 
-    style={{ transform:'scale(0.8)', marginTop:'-65px' }}
-    alt="A diaper brown gopher" />
+	src={require('@site/static/img/gophers/gopher-coffee.png').default} 
+	style={{ transform:'scale(0.8)', marginTop:'-65px' }}
+	alt="A diaper brown gopher" />
 </div>
 </div>
 
@@ -103,11 +107,11 @@ func main() {
 
 ```go
 func acessarIndice(slice []int, indice int) (int, error) {
-    if indice >= len(slice) {
-        return 0, fmt.Errorf("índice %d fora do limite (%d)", indice, len(slice))
-    }
+	if indice >= len(slice) {
+		return 0, fmt.Errorf("índice %d fora do limite (%d)", indice, len(slice))
+	}
 
-    return slice[indice], nil
+	return slice[indice], nil
 }
 ```
 
@@ -283,8 +287,8 @@ func main() {
 #### Saída (JSON)
 
 ```json
-    {"time":"2025-06-12T01:05:00Z","level":"INFO","msg":"Processando requisição","id":45,"metodo":"GET"}
-    {"time":"2025-06-12T01:05:00Z","level":"ERROR","msg":"Erro encontrado","error":"falha na operação","id":45}
+	{"time":"2025-06-12T01:05:00Z","level":"INFO","msg":"Processando requisição","id":45,"metodo":"GET"}
+	{"time":"2025-06-12T01:05:00Z","level":"ERROR","msg":"Erro encontrado","error":"falha na operação","id":45}
 ```
 
 #### Comparação com Java
@@ -397,7 +401,7 @@ func (r *RepositorioEmMemoria) Criar(nome string, preco float64) (Produto, error
 		return Produto{}, ErrPrecoInvalido
 	}
 
-    r.idCounter++
+	r.idCounter++
 	produto := Produto{ID: r.idCounter, Nome: nome, Preco: preco}
 	r.produtos = append(r.produtos, produto)
 	r.logger.Info("Produto criado", "id", produto.ID, "nome", nome, "preco", preco)
@@ -412,7 +416,7 @@ func (r *RepositorioEmMemoria) Buscar(id int) (Produto, error) {
 		}
 	}
 
-    r.logger.Error("Falha ao buscar produto", "error", ErrProdutoNaoEncontrado, "id", id)
+	r.logger.Error("Falha ao buscar produto", "error", ErrProdutoNaoEncontrado, "id", id)
 	return Produto{}, fmt.Errorf("buscar produto id %d: %w", id, ErrProdutoNaoEncontrado)
 }
 
@@ -427,7 +431,7 @@ func (r *RepositorioEmMemoria) Atualizar(id int, nome string, preco float64) (Pr
 		return Produto{}, ErrPrecoInvalido
 	}
 
-    for i, p := range r.produtos {
+	for i, p := range r.produtos {
 		if p.ID == id {
 			r.produtos[i] = Produto{ID: id, Nome: nome, Preco: preco}
 			r.logger.Info("Produto atualizado", "id", id, "nome", nome, "preco", preco)
@@ -435,7 +439,7 @@ func (r *RepositorioEmMemoria) Atualizar(id int, nome string, preco float64) (Pr
 		}
 	}
 
-    r.logger.Error("Falha ao atualizar produto", "error", ErrProdutoNaoEncontrado, "id", id)
+	r.logger.Error("Falha ao atualizar produto", "error", ErrProdutoNaoEncontrado, "id", id)
 	return Produto{}, fmt.Errorf("atualizar produto id %d: %w", id, ErrProdutoNaoEncontrado)
 }
 
@@ -448,7 +452,7 @@ func (r *RepositorioEmMemoria) Deletar(id int) error {
 		}
 	}
 
-    r.logger.Error("Falha ao deletar produto", "error", ErrProdutoNaoEncontrado, "id", id)
+	r.logger.Error("Falha ao deletar produto", "error", ErrProdutoNaoEncontrado, "id", id)
 	return fmt.Errorf("deletar produto id %d: %w", id, ErrProdutoNaoEncontrado)
 }
 
@@ -462,14 +466,14 @@ func exibirProdutos(repo RepositorioProdutos) error {
 		fmt.Printf("ID: %d, Nome: %s, Preço: %.2f\n", p.ID, p.Nome, p.Preco)
 	}
 
-    return nil
+	return nil
 }
 
 func main() {
 	// Inicializar repositório com logger
 	repo := NovoRepositorioEmMemoria()
 
-    // Criar produtos
+	// Criar produtos
 	p1, err := repo.Criar("Laptop", 999.99)
 	if err != nil {
 		fmt.Println("Erro:", err)
@@ -477,40 +481,40 @@ func main() {
 	}
 	repo.Criar("Mouse", 29.99)
 
-    // Listar produtos
+	// Listar produtos
 	fmt.Println("Lista de produtos:")
 	if err := exibirProdutos(repo); err != nil {
 		fmt.Println("Erro:", err)
 		return
 	}
 
-    // Buscar produto
+	// Buscar produto
 	if p, err := repo.Buscar(p1.ID); err == nil {
 		fmt.Printf("Produto encontrado: %+v\n", p)
 	} else {
 		fmt.Println("Erro:", err)
 	}
 
-    // Atualizar produto
+	// Atualizar produto
 	if p, err := repo.Atualizar(p1.ID, "Laptop Pro", 1299.99); err == nil {
 		fmt.Printf("Produto atualizado: %+v\n", p)
 	} else {
 		fmt.Println("Erro:", err)
 	}
 
-    // Tentar atualizar com preço inválido
+	// Tentar atualizar com preço inválido
 	if _, err := repo.Atualizar(p1.ID, "Laptop Pro", -100); err != nil {
 		fmt.Println("Erro esperado:", err) // Saída: preço não pode ser negativo
 	}
 
-    // Deletar produto
+	// Deletar produto
 	if err := repo.Deletar(2); err == nil {
 		fmt.Println("Produto deletado com sucesso")
 	} else {
 		fmt.Println("Erro:", err)
 	}
 
-    // Listar novamente
+	// Listar novamente
 	fmt.Println("Lista final:")
 	if err := exibirProdutos(repo); err != nil {
 		fmt.Println("Erro:", err)
