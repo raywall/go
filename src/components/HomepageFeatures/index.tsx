@@ -33,7 +33,7 @@ const FeatureList: FeatureItem[] = [
       id: 'homepage.feature.fast.title',
       message: 'Rápido',
       description: 'Title for the Fast feature on the homepage',
-    }),
+    }), 
     Svg: require('@site/static/img/gopher-flash-sm.svg').default,
     description: (
       <Translate
