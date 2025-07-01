@@ -16,33 +16,32 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  i18n: {
-    defaultLocale: 'pt',
-    locales: ['pt', 'en', 'es'],
-    localeConfigs: {
-      pt: {
-        label: 'Português (Brasil)',
-        direction: 'ltr',
-        htmlLang: 'pt-BR',
-        calendar: 'gregory',
-        path: 'pt',
-      },
-      en: {
-        label: 'English',
-        direction: 'ltr',
-        htmlLang: 'en-US',
-        calendar: 'gregory',
-        path: 'en',
-      },
-      es: {
-        label: 'Español',
-        direction: 'ltr',
-        htmlLang: 'es-ES',
-        calendar: 'gregory',
-        path: 'es',
-      }
-    },
-  }, 
+  // i18n: {
+  //   defaultLocale: 'pt',
+  //   locales: ['pt', 'en', 'es'],
+  //   localeConfigs: {
+  //     pt: {
+  //       label: 'Português (Brasil)',
+  //       direction: 'ltr',
+  //       htmlLang: 'pt-BR',
+  //       calendar: 'gregory',
+  //     },
+  //     en: {
+  //       label: 'English',
+  //       direction: 'ltr',
+  //       htmlLang: 'en-US',
+  //       calendar: 'gregory',
+  //       path: 'en',
+  //     },
+  //     es: {
+  //       label: 'Español',
+  //       direction: 'ltr',
+  //       htmlLang: 'es-ES',
+  //       calendar: 'gregory',
+  //       path: 'es',
+  //     }
+  //   },
+  // }, 
 
   presets: [
     [
@@ -70,6 +69,7 @@ const config: Config = {
       items: [
         { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Aprenda Golang' },
         { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Go + AWS Cloud (em breve)' },
+        // { type: 'localeDropdown', position: 'right' },
         { href: 'https://github.com/raywall/go', label: 'GitHub', position: 'right' },
       ],
     },
