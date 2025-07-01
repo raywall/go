@@ -41,7 +41,7 @@ const config: Config = {
         path: 'es',
       }
     },
-  },
+  }, 
 
   presets: [
     [
