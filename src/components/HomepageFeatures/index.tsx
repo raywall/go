@@ -2,7 +2,7 @@ import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
-import Translate, {translate} from '@docusaurus/Translate';
+// import Translate, {translate} from '@docusaurus/Translate';
 
 type FeatureItem = {
   title: string;
@@ -12,54 +12,36 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: translate({
-      id: 'homepage.feature.simple.title',
-      message: 'Simples',
-      description: 'Title for the Simple feature on the homepage',
-    }),
+    title: 'Simples',
     Svg: require('@site/static/img/gopher-simple-sm.svg').default,
     description: (
-      <Translate
-        id="homepage.feature.simple.description"
-        description="Description for the Simple feature on the homepage">
-        Sintaxe minimalista e intuitiva, projetada para ser extremamente fácil de
-        aprender e ler. Escreva código limpo e direto ao ponto, aumentando sua
-        produtividade desde o início.
-      </Translate>
+      <>
+        Sintaxe minimalista e intuitiva, projetada para ser extremamente f&aacute;cil
+        de aprender e ler. Escreva c&oacute;digo limpo e direto ao ponto,
+        aumentando sua produtividade desde o in&iacute;cio.
+      </>
     ),
   },
   {
-    title: translate({
-      id: 'homepage.feature.fast.title',
-      message: 'Rápido',
-      description: 'Title for the Fast feature on the homepage',
-    }), 
+    title: 'Rápido',
     Svg: require('@site/static/img/gopher-flash-sm.svg').default,
     description: (
-      <Translate
-        id="homepage.feature.fast.description"
-        description="Description for the Fast feature on the homepage">
-        Possui alta performance e compila diretamente para código de máquina,
-        entregando aplicações com inicialização quase instantânea e desempenho
-        excepcional para qualquer tarefa.
-      </Translate>
+      <>
+        Possui alta performance e compila diretamente para código de m&aacute;quina,
+        entregando aplica&ccedil;&otilde;es com inicializa&ccedil;&atilde;o quase instant&acirc;nea e
+        desempenho excepcional para qualquer tarefa.
+      </>
     ),
   },
   {
-    title: translate({
-      id: 'homepage.feature.powerful.title',
-      message: 'Poderoso',
-      description: 'Title for the Powerful feature on the homepage',
-    }),
+    title: 'Poderoso',
     Svg: require('@site/static/img/gopher-strong-sm.svg').default,
     description: (
-      <Translate
-        id="homepage.feature.powerful.description"
-        description="Description for the Powerful feature on the homepage">
-        Possui concorrência nativa. Com goroutines e channels, você pode criar
-        sistemas complexos e eficientes que aproveitam ao máximo o hardware
+      <>
+        Possui concorr&ecirc;ncia nativa. Com goroutines e channels, voc&ecirc; pode criar
+        sistemas complexos e eficientes que aproveitam ao m&aacute;ximo o hardware
         moderno de forma descomplicada.
-      </Translate>
+      </>
     ),
   },
 ];
