@@ -345,5 +345,13 @@
   "homepage.feature.powerful.description": {
     "message": "Possui concorrência nativa. Com goroutines e channels, você pode criar sistemas complexos e eficientes que aproveitam ao máximo o hardware moderno de forma descomplicada.",
     "description": "Description for the Powerful feature on the homepage"
+  },
+  "homepage.feature.header.title": {
+    "message": "Let's Go",
+    "description": "Homepage header title"
+  },
+  "homepage.feature.header.subtitle": {
+    "message": "curso intensivo de Go para desenvolvedores",
+    "description": "Homepage header subtitle"
   }
 }

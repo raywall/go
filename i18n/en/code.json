@@ -345,5 +345,13 @@
   "homepage.feature.powerful.description": {
     "message": "It features native concurrency. With goroutines and channels, you can easily create complex and efficient systems that take full advantage of modern hardware.",
     "description": "Description for the Powerful feature on the homepage"
+  },
+  "homepage.feature.header.title": {
+    "message": "Let's Go",
+    "description": "Homepage header title"
+  },
+  "homepage.feature.header.subtitle": {
+    "message": "lessons of Go for developers",
+    "description": "Homepage header subtitle"
   }
 }

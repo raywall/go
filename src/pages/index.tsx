@@ -15,9 +15,17 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+          <Translate
+            id="homepage.feature.header.title"
+            description= "Homepage header title">
+            {siteConfig.title}
+            </Translate>
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle"><Translate
+              id="homepage.feature.header.subtitle"
+              description= "Homepage header subtitle">
+              {siteConfig.tagline}
+            </Translate></p>
         <div className={styles.buttons}>
           {/* <img src="img/gopher.svg" className="gopher-first-image" /> */}
           {/* <Link
