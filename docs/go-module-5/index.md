@@ -14,12 +14,12 @@ O lab prático implementa um `worker pool` para processamento concorrente de tar
 
 ## Conteúdo
 
-- [Goroutines: o que são e como usar](1-goroutines.md)
-- [Channels (unbuffered, buffered)](2-channels.md)
-- [`select`, `sync.WaitGroup`, `sync.Mutex`](3-goroutines-handle.md)
-- [Padrões de concorrência em Go](4-padrao-concorrencia.md)
+- [Goroutines: o que são e como usar](./1-goroutines.md)
+- [Channels (unbuffered, buffered)](./2-channels.md)
+- [`select`, `sync.WaitGroup`, `sync.Mutex`](./3-goroutines-handle.md)
+- [Padrões de concorrência em Go](./4-padrao-concorrencia.md)
 
-📌 [Lab](5-laboratorio.md): Criar um worker pool para processamento concorrente de tarefas.
+📌 [Lab](./5-laboratorio.md): Criar um worker pool para processamento concorrente de tarefas.
 
 </div>
 <div className="col col--4 text--center">

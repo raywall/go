@@ -16,16 +16,16 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // i18n: {
-  //   defaultLocale: 'pt',
-  //   locales: ['pt', 'en', 'es'],
-  //   localeConfigs: {
-  //     pt: {
-  //       label: 'Português (Brasil)',
-  //       direction: 'ltr',
-  //       htmlLang: 'pt-BR',
-  //       calendar: 'gregory',
-  //     },
+  i18n: {
+    defaultLocale: 'pt',
+    locales: ['pt'],
+    localeConfigs: {
+      pt: {
+        label: 'Português (Brasil)',
+        direction: 'ltr',
+        htmlLang: 'pt-BR',
+        calendar: 'gregory',
+      }
   //     en: {
   //       label: 'English',
   //       direction: 'ltr',
@@ -40,8 +40,8 @@ const config: Config = {
   //       calendar: 'gregory',
   //       path: 'es',
   //     }
-  //   },
-  // }, 
+    },
+  }, 
 
   presets: [
     [
@@ -127,6 +127,8 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Raywall Malheiros. Built with Docusaurus.`,
     },
     prism: {
+      // theme: require('prism-react-renderer/github'),
+      // darkTheme: require('prism-react-renderer/dracula'),
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
       additionalLanguages: ['go'],
