@@ -131,7 +131,7 @@ const config: Config = {
       // darkTheme: require('prism-react-renderer/dracula'),
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ['go'],
+      // additionalLanguages: ['go'],
     },
   } satisfies Preset.ThemeConfig,
 };

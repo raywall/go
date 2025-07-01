@@ -1,23 +1,27 @@
 import siteConfig from '@generated/docusaurus.config';
+import type * as PrismNamespace from 'prismjs';
+import type {Optional} from 'utility-types';
 
-export default function prismIncludeLanguages(PrismObject) {
+export default function prismIncludeLanguages(
+  PrismObject: typeof PrismNamespace,
+): void {
   const {
-    themeConfig: { prism },
+    themeConfig: {prism},
   } = siteConfig;
-  const { additionalLanguages } = prism;
+  const {additionalLanguages} = prism as {additionalLanguages: string[]};
 
-  // Importar Go manualmente
-  require('prismjs/components/prism-go');
-
+  const PrismBefore = globalThis.Prism;
   globalThis.Prism = PrismObject;
 
   additionalLanguages.forEach((lang) => {
     if (lang === 'go') {
-      // Go já foi importado acima
-      return;
+      require('prismjs/components/prism-go');
     }
     require(`prismjs/components/prism-${lang}`);
   });
 
-  delete globalThis.Prism;
+  delete (globalThis as Optional<typeof globalThis, 'Prism'>).Prism;
+  if (typeof PrismBefore !== 'undefined') {
+    globalThis.Prism = PrismObject;
+  }
 }
