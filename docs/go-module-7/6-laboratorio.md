@@ -25,7 +25,7 @@ values={[
 
 ## Configuração
 
-1. Use a estrutura do [Módulo 06](go-module-6.md)
+1. Use a estrutura do [Módulo 06](go-module-6/5-laboratorio.md)
 
 ```dirtree
 lab6/
@@ -57,7 +57,7 @@ go get github.com/stretchr/testigy
 
 ### Objetivo
 
-Implementar testes unitários e de integração para o CRUD do [Módulo 06](go-module-6.md), usando `testing` e `testify`, com foco em cobertura de erros. Gerar relatórios de cobertura e usar `staticcheck` para análise.
+Implementar testes unitários e de integração para o CRUD do [Módulo 06](go-module-6/5-laboratorio.md), usando `testing` e `testify`, com foco em cobertura de erros. Gerar relatórios de cobertura e usar `staticcheck` para análise.
 
 ### Passo a passo
 

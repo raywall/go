@@ -25,7 +25,7 @@ values={[
 
 ## Configuração
 
-1. Use a estrutura do [Módulo 06](go-module-6.md)
+1. Use a estrutura do [Módulo 06](go-module-6/5-laboratorio.md)
 
 ```dirtree
 lab6/
@@ -72,7 +72,7 @@ require (
 
 ### Objetivo
 
-Implementar uma API RESTful para o CRUD do [Módulo 06](go-module-6.md), usando `Gin` para `roteamento`, `binding` e `validação`, integrando o repositório em memória e `logging estruturado`.
+Implementar uma API RESTful para o CRUD do [Módulo 06](go-module-6/5-laboratorio.md), usando `Gin` para `roteamento`, `binding` e `validação`, integrando o repositório em memória e `logging estruturado`.
 
 ### Passo a passo
 
