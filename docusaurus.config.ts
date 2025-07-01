@@ -113,9 +113,15 @@ const config: Config = {
           label: 'Aprenda Golang',
         },
         {
-          type: 'localeDropdown',
-          position: 'right',
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          position: 'left',
+          label: 'Go + AWS Cloud (em breve)',
         },
+        // {
+        //   type: 'localeDropdown',
+        //   position: 'right',
+        // },
         {
           href: 'https://github.com/raywall/go',
           label: 'GitHub',
@@ -131,6 +137,10 @@ const config: Config = {
           items: [
             {
               label: 'Golang',
+              to: '/docs/conteudo',
+            },
+            {
+              label: 'Golang + AWS Cloud (em breve)',
               to: '/docs/conteudo',
             },
           ],
