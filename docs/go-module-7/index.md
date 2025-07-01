@@ -12,13 +12,13 @@ Este módulo aborda testes e qualidade de código em Go, incluindo `testes unit�
 
 ## Conteúdo
 
-- [Testes com testing](1-testing.md)
-- [Testes de unidade e integração](2-testes-unitarios.md)
-- [Testes com mocks (`testify`, `gomock`)](3-testes-mock.md)
-- [Benchmarks e profiling](4-benchmarks-profiling.md)
-- [Ferramentas: `go vet`, `golint`, `staticcheck`](5-ferramentas.md)
+- [Testes com testing](./1-testing.md)
+- [Testes de unidade e integração](./2-testes-unitarios.md)
+- [Testes com mocks (`testify`, `gomock`)](./3-testes-mock.md)
+- [Benchmarks e profiling](./4-benchmarks-profiling.md)
+- [Ferramentas: `go vet`, `golint`, `staticcheck`](./5-ferramentas.md)
 
-📌 [Lab](6-laboratorio.md): Criar testes unitários e de integração para o CRUD com cobertura de erro.
+📌 [Lab](./6-laboratorio.md): Criar testes unitários e de integração para o CRUD com cobertura de erro.
 
 </div>
 <div className="col col--4 text--left">

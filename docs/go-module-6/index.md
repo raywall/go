@@ -14,12 +14,12 @@ O lab prático reorganiza o CRUD dos módulos anteriores em múltiplos pacotes, 
 
 ## Conteúdo
 
-- [Estrutura de pacotes idiomática](1-estrutura-pacotes.md)
-- [Convenções de projeto (`cmd`, `internal`, `pkg`)](2-convencoes-projeto.md)
-- [`go mod` e versionamento](3-modulos-versoes.md)
-- [Gerenciamento de dependências com `go get`, `replace`](4-gestao-dependencias.md)
+- [Estrutura de pacotes idiomática](./1-estrutura-pacotes.md)
+- [Convenções de projeto (`cmd`, `internal`, `pkg`)](./2-convencoes-projeto.md)
+- [`go mod` e versionamento](./3-modulos-versoes.md)
+- [Gerenciamento de dependências com `go get`, `replace`](./4-gestao-dependencias.md)
 
-📌 [Lab](5-laboratorio.md): Organizar o projeto CRUD em múltiplos pacotes com `go mod`.
+📌 [Lab](./5-laboratorio.md): Organizar o projeto CRUD em múltiplos pacotes com `go mod`.
 
 </div>
 <div className="col col--4 text--center">

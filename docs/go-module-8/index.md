@@ -12,12 +12,12 @@ Este módulo aborda a construção de `APIs RESTful` em Go, começando com o pac
 
 ## Conteúdo
 
-- [Servidor HTTP com `net/http`](1-servidor-http.md)
-- [Middlewares e handlers](2-middlewares-handlers.md)
-- [Framework Gin: `roteamento`, `binding`, `validação`](3-framework-gin.md)
-- [JSON, status codes e headers](4-json-status-headers.md)
+- [Servidor HTTP com `net/http`](./1-servidor-http.md)
+- [Middlewares e handlers](./2-middlewares-handlers.md)
+- [Framework Gin: `roteamento`, `binding`, `validação`](./3-framework-gin.md)
+- [JSON, status codes e headers](./4-json-status-headers.md)
 
-📌 [Lab](5-laboratorio.md): Implementar uma API RESTful com Gin + validação.
+📌 [Lab](./5-laboratorio.md): Implementar uma API RESTful com Gin + validação.
 
 </div>
 <div className="col col--4 text--center">

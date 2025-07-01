@@ -14,13 +14,13 @@ O lab prático containeriza a API CRUD dos módulos anteriores, configurando log
 
 ## Conteúdo
 
-- [Build com `go build`, cross-compilation](1-build.md)
-- [Docker com Go](2-docker.md)
-- [Logging estruturado (`slog`, `zap`)](3-logging-estruturado.md)
-- [Tracing com OpenTelemetry](4-tracing-otel.md)
-- [`Linter`, cobertura, documentação automática com `godoc`](5-linter-cobertura-doc.md)
+- [Build com `go build`, cross-compilation](./1-build.md)
+- [Docker com Go](./2-docker.md)
+- [Logging estruturado (`slog`, `zap`)](./3-logging-estruturado.md)
+- [Tracing com OpenTelemetry](./4-tracing-otel.md)
+- [`Linter`, cobertura, documentação automática com `godoc`](./5-linter-cobertura-doc.md)
 
-📌 [Lab](6-laboratorio.md): Containerizar o serviço e expor métricas/trace/logs.
+📌 [Lab](./6-laboratorio.md): Containerizar o serviço e expor métricas/trace/logs.
 
 </div>
 <div className="col col--3 text--left">
