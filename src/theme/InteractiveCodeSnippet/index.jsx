@@ -1,6 +1,12 @@
 import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import styles from './styles.module.css';
 
+import Editor from 'react-simple-code-editor';
+import Prism from 'prismjs';
+
+import 'prismjs/components/prism-go';
+import { usePrismTheme } from '@docusaurus/theme-common';
+
 const LAMBDA_URL = 'https://il5jdhvn5li6mbvknix7sq7u7e0mqtwv.lambda-url.us-east-1.on.aws/';
 
 function getInitialCode(initialCode, src) {
@@ -24,8 +30,9 @@ export default function InteractiveCodeSnippet({
   allowEdit = true,
 }) {
   const [code, setCode] = useState(() => getInitialCode(initialCode, src));
-
   const textareaRef = useRef(null);
+  const editorRef = useRef(null); 
+  const prismTheme = usePrismTheme();
 
   const [output, setOutput] = useState('');
   const [error, setError] = useState('');
@@ -34,13 +41,28 @@ export default function InteractiveCodeSnippet({
   const [copyText, setCopyText] = useState('⎘ Copiar');
 
   useLayoutEffect(() => {
-    if (textareaRef.current) {
-      const textarea = textareaRef.current;
-      textarea.style.height = 'auto';
-      textarea.style.height = `${textarea.scrollHeight}px`;
+    const textarea = textareaRef.current;
+    if (!textarea) {
+      return;
     }
-  }, [code]);
 
+    const resize = () => {
+      requestAnimationFrame(() => {
+        if (textarea.offsetHeight > 0) {
+          textarea.style.height = 'auto';
+          textarea.style.height = `${textarea.scrollHeight}px`;
+        }
+      });
+    };
+
+    resize();
+    const observer = new ResizeObserver(resize);
+    observer.observe(textarea);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [code]);
   
   const handleRun = async () => {
     setIsLoading(true);
@@ -95,12 +117,19 @@ export default function InteractiveCodeSnippet({
     <div className={styles.snippetContainer}>
       <div className={styles.codeWrapper}>
         <div className={styles.codeHeader}>Código Fonte (Go)</div>
-        <textarea
-            ref={textareaRef}
-            className={styles.codeArea}
-            value={code}
-            onChange={(e) => setCode(e.target.value)}
-            readOnly={!allowEdit || !isEditable}
+        <Editor
+          value={code}
+          onValueChange={newCode => setCode(newCode)}
+          highlight={code => {
+            if (Prism.languages.go) {
+              return Prism.highlight(code, Prism.languages.go, 'go');
+            }
+            return code;
+          }}
+          padding={16}
+          style={prismTheme}
+          className={styles.codeEditor}
+          readOnly={!allowEdit || !isEditable}
         />
       </div>
 

@@ -19,7 +19,24 @@
   border-bottom: 1px solid var(--ifm-color-emphasis-300);
 }
 
-.codeArea {
+.codeEditor {
+  font-family: var(--ifm-font-family-monospace) !important;
+  font-size: 0.8rem;
+  min-height: 135px;
+  padding: 1.2rem;
+  tab-size: 4;
+  flex-grow: 1;
+}
+
+.codeEditor:focus-within {
+  box-shadow: inset 0 0 0 2px var(--ifm-color-primary);
+}
+
+.codeEditor pre {
+  margin: 0;
+}
+
+/* .codeArea {
   width: 100%;
   min-height: 135px;
   border: none;
@@ -35,7 +52,7 @@
 .codeArea:focus {
   outline: none;
   box-shadow: inset 0 0 0 2px var(--ifm-color-primary);
-}
+} */
 
 .commandsWrapper {
   padding: 0.5rem;

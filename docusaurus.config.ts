@@ -4,6 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+/** @type {import('@docusaurus/types').Config} */
 const config: Config = {
   title: 'Let`s Go',
   tagline: 'curso intensivo de Go para desenvolvedores',
@@ -97,6 +98,7 @@ const config: Config = {
   ],
 
   themeConfig: {
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     // Replace with your project's social card
     image: 'img/gopher-program.jpeg',
     navbar: {
@@ -183,8 +185,11 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Raywall Malheiros. Built with Docusaurus.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: require('prism-react-renderer').themes.github,
+      // theme: prismThemes.github,
+      darkTheme: require('prism-react-renderer').themes.dracula,
+      // darkTheme: prismThemes.dracula,
+      additionalLanguages: ['go'], 
     },
   } satisfies Preset.ThemeConfig,
 };
