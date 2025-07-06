@@ -5,20 +5,22 @@ sidebar_label: Estrutura do curso
 
 # Estrutura do curso
 
+## Introdução a linguagem Go
+
 <div className="row">
 <div className="col" style={{ marginLeft: '1rem' }}>
 
-## Duração sugerida
+### Duração sugerida
 
 05 dias (4h por dia) ou 10 sessões (2h cada)
 
-## Formato
+### Formato
 
 Teórico + Mão na massa
 
 > Cada módulo tem um lab para praticar
 
-## Pré-requisitos
+### Pré-requisitos
 
 Conhecimento prévio em backend com:
 
