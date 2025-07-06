@@ -5,20 +5,19 @@ sidebar_label: Conteúdo programático
 
 # Conteúdo programático
 
-## [Módulo 01](./go-module-1/index.md) – Introdução e fundamentos da linguagem
+## [Módulo 01](./go-module-1/index.md) – Revisão rápida Go + setup Cloud
 
 <div className="row">
 <div className="col">
 
-- História e propósito do Go
-- Características da linguagem (simplicidade, performance, concorrência)
-- Instalação, workspace, `go mod`
-- Estrutura básica de um programa
-- Tipos primitivos, funções, variáveis, constantes
+- Reforço prático da base Go
+- Instalação AWS CLI / SDK Go
+- Autenticação com AWS IAM (perfis e roles)
+- Estrutura de projeto Go para cloud
 
 ### 📌 Laboratório
 
-- Hello world, manipulação de variáveis e tipos, primeiro programa com `go run`
+- Setup local + execução de chamadas autenticadas via SDK AWS (`STS/GetCallerIdentity`)
 
 </div>
 <div className="col col--3 text--left" style={{ paddingTop: '8px' }}>
@@ -29,19 +28,20 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 02](./go-module-2/index.md) – Estruturas de controle e tipos compostos
+## [Módulo 02](./go-module-2/index.md) – Armazenamento com S3 e DynamoDB
 
 <div className="row">
 <div className="col">
 
-- `if`, `for`, `switch`, `defer`
-- Arrays, slices, maps
-- Structs e tags de struct
-- Ponteiros (conceito e aplicação)
+- Upload/download com `s3manager`
+- Uso de presigned URLs
+- Operações CRUD com `DynamoDB`
+- Tipagem forte com structs + marshaling
+- Padrão de repositório para acesso ao Dynamo
 
 ### 📌 Laboratório
 
-- Implementar um CRUD (Create, Read, Update e Delete) em memória usando slices e maps
+- Criar um serviço de upload de arquivos com metadados persistidos em DynamoDB
 
 </div>
 <div className="col col--3 text--left" style={{ paddingTop: '8px' }}>
@@ -53,20 +53,19 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 03](./go-module-3/index.md) – Funções, métodos e interfaces
+## [Módulo 03](./go-module-3/index.md) – Fila de Mensagens com SQS
 
 <div className="row">
 <div className="col">
 
-- Funções com múltiplos retornos
-- Funções anônimas e closures
-- Métodos em structs
-- Interfaces e duck typing
-- Boas práticas e princípios de design idiomático em Go
+- Produção e consumo de mensagens
+- Dead Letter Queues
+- Retry e visibilidade de mensagens
+- Processamento assíncrono com goroutines
 
 ### 📌 Laboratório
 
-- Refatorar o CRUD usando interfaces para repositórios
+- Criar uma fila de notificação e um worker para processá-la
 
 </div>
 <div className="col col--3 text--left" style={{ paddingTop: '8px' }}>
@@ -78,19 +77,19 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 04](./go-module-4/index.md) – Tratamento de erros
+## [Módulo 04](./go-module-4/index.md) – Eventos e Lambda com Go
 
 <div className="row">
 <div className="col">
 
-- Filosofia do Go: erros explícitos
-- Padrão error, `errors.New`, `fmt.Errorf`
-- Wrapping e unwrapping com `errors.Is`, `errors.As`
-- Pacote `log` e `log/slog`
+- Escrever funções Lambda com Go
+- Eventos de S3, Dynamo e SQS
+- Empacotamento com `zip` e deploy com `SAM CLI`
+- Timeout e limites de memória
 
 ### 📌 Laboratório
 
-- Criar funções com tratamento de erros e logging estruturado
+- Criar Lambda que reage a upload no S3, processa e persiste dados
 
 </div>
 <div className="col col--3 text--left" style={{ paddingTop: '8px' }}>
@@ -102,19 +101,19 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 05](./go-module-5/index.md) – Concorrência com goroutines e channels
+## [Módulo 05](./go-module-5/index.md) – API Gateway + Lambda Proxy
 
 <div className="row">
 <div className="col">
 
-- Goroutines: o que são e como usar
-- Channels (unbuffered, buffered)
-- `select`, `sync.WaitGroup`, `sync.Mutex`
-- Padrões de concorrência em Go
+- Criação de endpoints com API Gateway
+- Integração direta com Lambda (Proxy)
+- Controle de métodos e autenticação
+- Padrão API Gateway + Lambda + Dynamo
 
 ### 📌 Laboratório
 
-- Criar um worker pool para processamento concorrente de tarefas
+- Criar uma API Serverless completa em Go (CRUD de produtos)
 
 </div>
 <div className="col col--3 text--left">
@@ -127,19 +126,36 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 06](./go-module-6/index.md) – Pacotes, módulos e organização do código
+## [Módulo 06](./go-module-6/index.md) – Observabilidade: CloudWatch, Datadog e X-Ray
 
 <div className="row">
 <div className="col">
 
-- Estrutura de pacotes idiomática
-- Convenções de projeto (`cmd`, `internal`, `pkg`)
-- `go mod` e versionamento
-- Gerenciamento de dependências com `go get`, `replace`
+- **Boas práticas de logging estruturado com `slog`**
+- Criação e envio de logs customizados para **CloudWatch Logs**
+- Coleta de métricas customizadas com `PutMetricData` (namespace próprio)
+- Integração com **AWS X-Ray** para rastreamento de chamadas (tracing)
+- Uso do middleware X-Ray para instrumentar handlers HTTP
+
+- **Integração com Datadog**:
+
+  - Configuração do agente Datadog para ECS ou Lambda
+  - Envio de métricas via `statsd` e `dd-trace-go`
+  - Criação de spans manuais e automáticos (Datadog APM)
+  - Logging estruturado com correlação de trace ID (Datadog Logging)
+
+- Comparativo entre X-Ray e Datadog para tracing e métricas
 
 ### 📌 Laboratório
 
-- Organizar o projeto CRUD em múltiplos pacotes com `go mod`
+- Instrumentar uma aplicação Go com:
+
+  - Logs estruturados no CloudWatch
+  - Métricas customizadas para CloudWatch e Datadog
+  - Traces distribuídos com X-Ray e Datadog APM
+  - Correlação entre log, trace e métricas
+
+- Gerar carga e validar os painéis em ambos os sistemas
 
 </div>
 <div className="col col--3 text--left">
@@ -152,20 +168,19 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 07](./go-module-7/index.md) – Testes e qualidade de código
+## [Módulo 07](./go-module-7/index.md) – Deploy e CI/CD com AWS
 
 <div className="row">
 <div className="col">
 
-- Testes com testing
-- Testes de unidade e integração
-- Testes com mocks (`testify`, `gomock`)
-- Benchmarks e profiling
-- Ferramentas: `go vet`, `golint`, `staticcheck`
+- Build cross-platform com `GOOS`/`GOARCH`
+- Dockerização com multi-stage builds
+- Deploy com ECS Fargate + Load Balancer
+- Integração com CodePipeline
 
 ### 📌 Laboratório
 
-- Criar testes unitários e de integração para o CRUD com cobertura de erro
+- Dockerizar aplicação e publicar via ECS com configuração mínima
 
 </div>
 <div className="col col--3 text--left">
@@ -178,19 +193,18 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 08](./go-module-8/index.md) – Web APIs com net/http e Gin
+## [Módulo 08](./go-module-8/index.md) – Secrets e configuração
 
 <div className="row">
 <div className="col">
 
-- Servidor HTTP com `net/http`
-- Middlewares e handlers
-- Framework Gin: `roteamento`, `binding`, `validação`
-- JSON, status codes e headers
+- Uso do Secrets Manager com SDK Go
+- Parâmetros no SSM Parameter Store
+- Boas práticas para leitura segura de configurações
 
 ### 📌 Laboratório
 
-- Implementar uma API RESTful com Gin + validação
+- Configurar leitura dinâmica de secrets e variáveis de ambiente
 
 </div>
 <div className="col col--3 text--left">
@@ -203,19 +217,18 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 09](./go-module-9/index.md) – Persistência com banco de dados
+## [Módulo 09](./go-module-9/index.md) – Integração com EventBridge e SNS
 
 <div className="row">
 <div className="col">
 
-- Drivers e `database/sql`
-- ORM com `gorm`
-- Migrations com `golang-migrate`
-- Repositórios e testes de integração com DB
+- Disparo e escuta de eventos customizados
+- Fanout de mensagens com SNS
+- Padrão de eventos com payloads tipados
 
 ### 📌 Laboratório
 
-- Persistir o CRUD em banco real (PostgreSQL por exemplo)
+- Criar um sistema que publica eventos e envia notificações
 
 </div>
 <div className="col col--3 text--left">
@@ -228,20 +241,18 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 10](./go-module-10/index.md) – Deploy, observabilidade e boas práticas
+## [Módulo 10](./go-module-10/index.md) – Infraestrutura como código com terraform
 
 <div className="row">
 <div className="col">
 
-- Build com `go build`, cross-compilation
-- Docker com Go
-- Logging estruturado (`slog`, `zap`)
-- Tracing com OpenTelemetry
-- `Linter`, cobertura, documentação automática com `godoc`
+- Criação de recursos AWS com Terraform
+- Integração entre Terraform e Go
+- Separação de ambientes (dev/stage/prod)
 
 ### 📌 Laboratório
 
-- Containerizar o serviço e expor métricas/trace/logs
+- Provisionar toda a stack Go + AWS com Terraform
 
 </div>
 <div className="col col--3 text--left">

@@ -5,20 +5,19 @@ sidebar_label: Conteúdo programático
 
 # Conteúdo programático
 
-## [Módulo 01](./go-module-1/index.md) – Introdução e fundamentos da linguagem
+## [Módulo 01](./go-module-1/index.md) – Anatomia da performance em Go
 
 <div className="row">
 <div className="col">
 
-- História e propósito do Go
-- Características da linguagem (simplicidade, performance, concorrência)
-- Instalação, workspace, `go mod`
-- Estrutura básica de um programa
-- Tipos primitivos, funções, variáveis, constantes
+- Como o Go compila e executa
+- Benchmarking com `testing.B`
+- Perfilamento com `pprof`
+- Ferramentas: `go tool trace`, `benchstat`, `race`
 
 ### 📌 Laboratório
 
-- Hello world, manipulação de variáveis e tipos, primeiro programa com `go run`
+- Benchmark de funções com diferentes abordagens
 
 </div>
 <div className="col col--3 text--left" style={{ paddingTop: '8px' }}>
@@ -29,19 +28,19 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 02](./go-module-2/index.md) – Estruturas de controle e tipos compostos
+## [Módulo 02](./go-module-2/index.md) – Otimização de alocação e memória
 
 <div className="row">
 <div className="col">
 
-- `if`, `for`, `switch`, `defer`
-- Arrays, slices, maps
-- Structs e tags de struct
-- Ponteiros (conceito e aplicação)
+- Passagem por valor vs por referência
+- Minimização de alocações com `sync.Pool`
+- Zero-allocation APIs
+- Profiling de heap e GC tuning
 
 ### 📌 Laboratório
 
-- Implementar um CRUD (Create, Read, Update e Delete) em memória usando slices e maps
+- Reescrever código para reduzir GC pressure e melhorar throughput
 
 </div>
 <div className="col col--3 text--left" style={{ paddingTop: '8px' }}>
@@ -53,20 +52,19 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 03](./go-module-3/index.md) – Funções, métodos e interfaces
+## [Módulo 03](./go-module-3/index.md) – Concorrência avançada com goroutines e channels
 
 <div className="row">
 <div className="col">
 
-- Funções com múltiplos retornos
-- Funções anônimas e closures
-- Métodos em structs
-- Interfaces e duck typing
-- Boas práticas e princípios de design idiomático em Go
+- Design de pipelines com canais
+- Fan-in, fan-out, backpressure
+- Evitando leaks com `select` e `default`
+- `context.Context` para controle de cancelamento
 
 ### 📌 Laboratório
 
-- Refatorar o CRUD usando interfaces para repositórios
+- Pipeline concorrente de scraping com controle de tempo e timeout
 
 </div>
 <div className="col col--3 text--left" style={{ paddingTop: '8px' }}>
@@ -78,19 +76,19 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 04](./go-module-4/index.md) – Tratamento de erros
+## [Módulo 04](./go-module-4/index.md) – Tratamento resiliente de falhas
 
 <div className="row">
 <div className="col">
 
-- Filosofia do Go: erros explícitos
-- Padrão error, `errors.New`, `fmt.Errorf`
-- Wrapping e unwrapping com `errors.Is`, `errors.As`
-- Pacote `log` e `log/slog`
+- Retry com `exponential backoff`
+- Implementação de **circuit breaker** simples
+- `context.WithTimeout`, `WithCancel`, `WithValue`
+- Tolerância a falhas com fallback e timeout
 
 ### 📌 Laboratório
 
-- Criar funções com tratamento de erros e logging estruturado
+- Serviço com retry inteligente e breaker entre dependências
 
 </div>
 <div className="col col--3 text--left" style={{ paddingTop: '8px' }}>
@@ -102,19 +100,18 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 05](./go-module-5/index.md) – Concorrência com goroutines e channels
+## [Módulo 05](./go-module-5/index.md) – Paralelismo controlado com workers e semáforos
 
 <div className="row">
 <div className="col">
 
-- Goroutines: o que são e como usar
-- Channels (unbuffered, buffered)
-- `select`, `sync.WaitGroup`, `sync.Mutex`
-- Padrões de concorrência em Go
+- Limitação de concorrência
+- `sync.WaitGroup`, `sync.Mutex`, `sync.Cond`
+- Implementação de rate limiters
 
 ### 📌 Laboratório
 
-- Criar um worker pool para processamento concorrente de tarefas
+- Serviço que executa milhares de requisições com limitação de paralelismo
 
 </div>
 <div className="col col--3 text--left">
@@ -127,19 +124,19 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 06](./go-module-6/index.md) – Pacotes, módulos e organização do código
+## [Módulo 06](./go-module-6/index.md) – Estruturas de dados otimizadas
 
 <div className="row">
 <div className="col">
 
-- Estrutura de pacotes idiomática
-- Convenções de projeto (`cmd`, `internal`, `pkg`)
-- `go mod` e versionamento
-- Gerenciamento de dependências com `go get`, `replace`
+- Comparação entre maps, slices, arrays
+- Algoritmos customizados
+- Utilização de pacotes como `container/heap`, `ring`, `list`
+- Quando usar `unsafe`
 
 ### 📌 Laboratório
 
-- Organizar o projeto CRUD em múltiplos pacotes com `go mod`
+- Criar estruturas otimizadas para cache com TTL e LRU
 
 </div>
 <div className="col col--3 text--left">
@@ -152,20 +149,19 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 07](./go-module-7/index.md) – Testes e qualidade de código
+## [Módulo 07](./go-module-7/index.md) – High performance networking
 
 <div className="row">
 <div className="col">
 
-- Testes com testing
-- Testes de unidade e integração
-- Testes com mocks (`testify`, `gomock`)
-- Benchmarks e profiling
-- Ferramentas: `go vet`, `golint`, `staticcheck`
+- Servidores HTTP low-level com `net/http` + `http.Server`
+- Pooling de conexões
+- Performance tuning de HTTP clients
+- Uso de gRPC com Go (introdução)
 
 ### 📌 Laboratório
 
-- Criar testes unitários e de integração para o CRUD com cobertura de erro
+- Serviço com benchmark de throughput entre HTTP e gRPC
 
 </div>
 <div className="col col--3 text--left">
@@ -178,19 +174,18 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 08](./go-module-8/index.md) – Web APIs com net/http e Gin
+## [Módulo 08](./go-module-8/index.md) – Streams e processamento de dados em tempo real
 
 <div className="row">
 <div className="col">
 
-- Servidor HTTP com `net/http`
-- Middlewares e handlers
-- Framework Gin: `roteamento`, `binding`, `validação`
-- JSON, status codes e headers
+- Processamento contínuo com goroutines
+- Padrão de buffer e janela
+- Otimização com canais e lock-free design
 
 ### 📌 Laboratório
 
-- Implementar uma API RESTful com Gin + validação
+- Criar um processador de stream em tempo real com múltiplos consumidores
 
 </div>
 <div className="col col--3 text--left">
@@ -203,19 +198,18 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 09](./go-module-9/index.md) – Persistência com banco de dados
+## [Módulo 09](./go-module-9/index.md) – Integração com C/C++ e system calls
 
 <div className="row">
 <div className="col">
 
-- Drivers e `database/sql`
-- ORM com `gorm`
-- Migrations com `golang-migrate`
-- Repositórios e testes de integração com DB
+- Usando `cgo`
+- Chamada de bibliotecas nativas (opcional, para bibliotecas críticas)
+- Avaliação de custo-benefício
 
 ### 📌 Laboratório
 
-- Persistir o CRUD em banco real (PostgreSQL por exemplo)
+- Criar binding simples com biblioteca C
 
 </div>
 <div className="col col--3 text--left">
@@ -228,20 +222,19 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 10](./go-module-10/index.md) – Deploy, observabilidade e boas práticas
+## [Módulo 10](./go-module-10/index.md) – Design de sistemas de alta performance
 
 <div className="row">
 <div className="col">
 
-- Build com `go build`, cross-compilation
-- Docker com Go
-- Logging estruturado (`slog`, `zap`)
-- Tracing com OpenTelemetry
-- `Linter`, cobertura, documentação automática com `godoc`
+- Estratégias de particionamento e cache
+- Microserviços com Go de alta performance
+- Deployment otimizado (builds tiny, alpine, etc)
+- Feature flags, toggles e circuit breaker via middleware
 
 ### 📌 Laboratório
 
-- Containerizar o serviço e expor métricas/trace/logs
+- Serviço com rotas de alta disponibilidade e circuit breaker centralizado
 
 </div>
 <div className="col col--3 text--left">

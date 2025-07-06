@@ -20,12 +20,23 @@ Teórico + Mão na massa
 
 ### Pré-requisitos
 
-Conhecimento prévio em backend com:
+- Conhecimento básico de Go:
 
-- Git
-- Java ou Python
-- http e Rest API
-- Banco de dados relacional
+  - estruturas
+  - concorrência
+  - pacotes
+  - testes
+  - observabilidade
+
+- Conhecimento prévio em backend com:
+
+  - Git
+  - http e Rest API
+  - Banco de dados relacional
+  - Banco de dados NoSQL
+
+- Familiaridade com conceitos de nuvem (ex.: o que é uma VPC, IAM, ou API REST)
+- Conta AWS (recomenda-se o nível gratuito para labs) e ferramentas como AWS CLI e Docker instaladas
 
 </div>
 <div className="col col--6 text--center">
