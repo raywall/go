@@ -18,7 +18,8 @@ const FeatureList: FeatureItem[] = [
       description: 'Title for the Simple feature on the homepage',
     }),
     Svg: require('@site/static/img/gopher-simple-sm.svg').default,
-    description: (
+    description: 
+    (
       <Translate
         id="homepage.feature.simple.description"
         description="Description for the Simple feature on the homepage">

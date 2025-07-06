@@ -14,12 +14,12 @@ O lab prático implementa funções com tratamento de erros e logging estruturad
 
 ## Conteúdo
 
-- [Filosofia do Go: erros explícitos](1-filosofia.md)
-- [Padrão error, `errors.New`, `fmt.Errorf`](2-padrao-error.md)
-- [Wrapping e unwrapping com `errors.Is`, `errors.As`](3-wrapping.md)
-- [Pacote `log` e `log/slog`](4-logs.md)
+- [Filosofia do Go: erros explícitos](./1-filosofia.md)
+- [Padrão error, `errors.New`, `fmt.Errorf`](./2-padrao-error.md)
+- [Wrapping e unwrapping com `errors.Is`, `errors.As`](./3-wrapping.md)
+- [Pacote `log` e `log/slog`](./4-logs.md)
 
-📌 [Lab](5-laboratorio.md): Criar funções com tratamento de erros e logging estruturado.
+📌 [Lab](./5-laboratorio.md): Criar funções com tratamento de erros e logging estruturado.
 
 </div>
 <div className="col col--4 text--center">

@@ -18,28 +18,28 @@ const config: Config = {
 
   i18n: {
     defaultLocale: 'pt',
-    locales: ['pt', 'en', 'es'],
+    locales: ['pt'],
     localeConfigs: {
       pt: {
         label: 'Português (Brasil)',
         direction: 'ltr',
         htmlLang: 'pt-BR',
         calendar: 'gregory',
-      },
-      en: {
-        label: 'English',
-        direction: 'ltr',
-        htmlLang: 'en-US',
-        calendar: 'gregory',
-        path: 'en',
-      },
-      es: {
-        label: 'Español',
-        direction: 'ltr',
-        htmlLang: 'es-ES',
-        calendar: 'gregory',
-        path: 'es',
       }
+  //     en: {
+  //       label: 'English',
+  //       direction: 'ltr',
+  //       htmlLang: 'en-US',
+  //       calendar: 'gregory',
+  //       path: 'en',
+  //     },
+  //     es: {
+  //       label: 'Español',
+  //       direction: 'ltr',
+  //       htmlLang: 'es-ES',
+  //       calendar: 'gregory',
+  //       path: 'es',
+  //     }
     },
   }, 
 
@@ -68,7 +68,8 @@ const config: Config = {
       logo: { alt: 'Gopher', src: 'img/go-white.svg' },
       items: [
         { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Aprenda Golang' },
-        { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Go + AWS Cloud (em breve)' },
+        // { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Go + AWS Cloud (em breve)' },
+        // { type: 'localeDropdown', position: 'right' },
         { href: 'https://github.com/raywall/go', label: 'GitHub', position: 'right' },
       ],
     },
@@ -81,11 +82,11 @@ const config: Config = {
             {
               label: 'Golang',
               to: '/docs/conteudo',
-            },
-            {
-              label: 'Golang + AWS Cloud (em breve)',
-              to: '/docs/conteudo',
-            },
+            }
+            // {
+            //   label: 'Golang + AWS Cloud (em breve)',
+            //   to: '/docs/conteudo',
+            // },
           ],
         },
         {
@@ -126,9 +127,11 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Raywall Malheiros. Built with Docusaurus.`,
     },
     prism: {
+      // theme: require('prism-react-renderer/github'),
+      // darkTheme: require('prism-react-renderer/dracula'),
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ['go'],
+      // additionalLanguages: ['go'],
     },
   } satisfies Preset.ThemeConfig,
 };

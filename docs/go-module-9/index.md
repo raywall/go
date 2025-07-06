@@ -12,12 +12,12 @@ Este módulo aborda a persistência de dados em Go, usando o pacote padrão `dat
 
 ## Conteúdo
 
-- [Drivers e `database/sql`](1-drivers-database-sql.md)
-- [ORM com `gorm`](2-gorm.md)
-- [Migrations com `golang-migrate`](3-golang-migrate.md)
-- [Repositórios e testes de integração com DB](4-repo-testes-integracao.md)
+- [Drivers e `database/sql`](./1-drivers-database-sql.md)
+- [ORM com `gorm`](./2-gorm.md)
+- [Migrations com `golang-migrate`](./3-golang-migrate.md)
+- [Repositórios e testes de integração com DB](./4-repo-testes-integracao.md)
 
-📌 [Lab](5-laboratorio.md): Persistir o CRUD em banco real (PostgreSQL por exemplo).
+📌 [Lab](./5-laboratorio.md): Persistir o CRUD em banco real (PostgreSQL por exemplo).
 
 </div>
 <div className="col col--4 text--center">

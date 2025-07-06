@@ -14,12 +14,12 @@ O lab prático implementa uma CRUD (Create, Read, Update e Delete) em memória, 
 
 ## Conteúdo
 
-- [`if`, `for`, `switch`, `defer`](1-estruturas-controle.md)
-- [Arrays, slices, maps](2-arrays-slices-maps.md)
-- [Structs e tags de struct](3-structs-tags.md)
-- [Ponteiros (conceito e aplicação)](4-ponteiros.md)
+- [`if`, `for`, `switch`, `defer`](./1-estruturas-controle.md)
+- [Arrays, slices, maps](./2-arrays-slices-maps.md)
+- [Structs e tags de struct](./3-structs-tags.md)
+- [Ponteiros (conceito e aplicação)](./4-ponteiros.md)
 
-📌 [Lab](5-laboratorio.md): Implementar um CRUD (Create, Read, Update e Delete) em memória usando slices e maps.
+📌 [Lab](./5-laboratorio.md): Implementar um CRUD (Create, Read, Update e Delete) em memória usando slices e maps.
 
 </div>
 <div className="col col--4 text--center">
