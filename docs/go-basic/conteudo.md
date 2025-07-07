@@ -9,13 +9,16 @@ sidebar_label: Conteúdo programático
 
 <div className="row">
 <div className="col">
+
 - História e propósito do Go
 - Características da linguagem (simplicidade, performance, concorrência)
 - Instalação, workspace, `go mod`
 - Estrutura básica de um programa
 - Tipos primitivos, funções, variáveis, constantes
 
-📌 Lab: Hello world, manipulação de variáveis e tipos, primeiro programa com `go run`.
+### 📌 Laboratório
+
+- Hello world, manipulação de variáveis e tipos, primeiro programa com `go run`
 
 </div>
 <div className="col col--3 text--left" style={{ paddingTop: '8px' }}>
@@ -30,12 +33,15 @@ sidebar_label: Conteúdo programático
 
 <div className="row">
 <div className="col">
+
 - `if`, `for`, `switch`, `defer`
 - Arrays, slices, maps
 - Structs e tags de struct
 - Ponteiros (conceito e aplicação)
 
-📌 Lab: Implementar um CRUD (Create, Read, Update e Delete) em memória usando slices e maps.
+### 📌 Laboratório
+
+- Implementar um CRUD (Create, Read, Update e Delete) em memória usando slices e maps
 
 </div>
 <div className="col col--3 text--left" style={{ paddingTop: '8px' }}>
@@ -51,13 +57,16 @@ sidebar_label: Conteúdo programático
 
 <div className="row">
 <div className="col">
+
 - Funções com múltiplos retornos
 - Funções anônimas e closures
 - Métodos em structs
 - Interfaces e duck typing
 - Boas práticas e princípios de design idiomático em Go
 
-📌 Lab: Refatorar o CRUD usando interfaces para repositórios.
+### 📌 Laboratório
+
+- Refatorar o CRUD usando interfaces para repositórios
 
 </div>
 <div className="col col--3 text--left" style={{ paddingTop: '8px' }}>
@@ -79,7 +88,9 @@ sidebar_label: Conteúdo programático
 - Wrapping e unwrapping com `errors.Is`, `errors.As`
 - Pacote `log` e `log/slog`
 
-📌 Lab: Criar funções com tratamento de erros e logging estruturado.
+### 📌 Laboratório
+
+- Criar funções com tratamento de erros e logging estruturado
 
 </div>
 <div className="col col--3 text--left" style={{ paddingTop: '8px' }}>
@@ -101,7 +112,9 @@ sidebar_label: Conteúdo programático
 - `select`, `sync.WaitGroup`, `sync.Mutex`
 - Padrões de concorrência em Go
 
-📌 Lab: Criar um worker pool para processamento concorrente de tarefas.
+### 📌 Laboratório
+
+- Criar um worker pool para processamento concorrente de tarefas
 
 </div>
 <div className="col col--3 text--left">
@@ -124,7 +137,9 @@ sidebar_label: Conteúdo programático
 - `go mod` e versionamento
 - Gerenciamento de dependências com `go get`, `replace`
 
-📌 Lab: Organizar o projeto CRUD em múltiplos pacotes com `go mod`.
+### 📌 Laboratório
+
+- Organizar o projeto CRUD em múltiplos pacotes com `go mod`
 
 </div>
 <div className="col col--3 text--left">
@@ -148,7 +163,9 @@ sidebar_label: Conteúdo programático
 - Benchmarks e profiling
 - Ferramentas: `go vet`, `golint`, `staticcheck`
 
-📌 Lab: Criar testes unitários e de integração para o CRUD com cobertura de erro.
+### 📌 Laboratório
+
+- Criar testes unitários e de integração para o CRUD com cobertura de erro
 
 </div>
 <div className="col col--3 text--left">
@@ -171,7 +188,9 @@ sidebar_label: Conteúdo programático
 - Framework Gin: `roteamento`, `binding`, `validação`
 - JSON, status codes e headers
 
-📌 Lab: Implementar uma API RESTful com Gin + validação.
+### 📌 Laboratório
+
+- Implementar uma API RESTful com Gin + validação
 
 </div>
 <div className="col col--3 text--left">
@@ -194,7 +213,9 @@ sidebar_label: Conteúdo programático
 - Migrations com `golang-migrate`
 - Repositórios e testes de integração com DB
 
-📌 Lab: Persistir o CRUD em banco real (PostgreSQL por exemplo).
+### 📌 Laboratório
+
+- Persistir o CRUD em banco real (PostgreSQL por exemplo)
 
 </div>
 <div className="col col--3 text--left">
@@ -218,7 +239,9 @@ sidebar_label: Conteúdo programático
 - Tracing com OpenTelemetry
 - `Linter`, cobertura, documentação automática com `godoc`
 
-📌 Lab: Containerizar o serviço e expor métricas/trace/logs.
+### 📌 Laboratório
+
+- Containerizar o serviço e expor métricas/trace/logs
 
 </div>
 <div className="col col--3 text--left">

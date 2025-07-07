@@ -67,8 +67,9 @@ const config: Config = {
       title: 'Let`s Go',
       logo: { alt: 'Gopher', src: 'img/go-white.svg' },
       items: [
-        { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Aprenda Golang' },
-        // { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Go + AWS Cloud (em breve)' },
+        { type: 'docSidebar', sidebarId: 'basicSidebar', position: 'left', label: 'Básico' },
+        { type: 'docSidebar', sidebarId: 'middleSidebar', position: 'left', label: 'Intermediário' },
+        { type: 'docSidebar', sidebarId: 'advancedSidebar', position: 'left', label: 'Avançado' },
         // { type: 'localeDropdown', position: 'right' },
         { href: 'https://github.com/raywall/go', label: 'GitHub', position: 'right' },
       ],
