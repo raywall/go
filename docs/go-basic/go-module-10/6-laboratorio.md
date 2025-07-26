@@ -39,7 +39,7 @@ psql -U postgres -c "CREATE DATABASE mydb;"
 
 ## Configuração
 
-1. Use a estrutura do [Módulo 09](go-module-9/5-laboratorio.md)
+1. Use a estrutura do [Módulo 09](go-basic/go-module-9/5-laboratorio.md)
 
 ```dirtree
 lab6/
@@ -106,7 +106,7 @@ require (
 
 ### Objetivo
 
-Containerizar a API CRUD do [Módulo 09](go-module-9/index.md) (`PostgreSQL`), configurar _logging estruturado_ com `zap`, tracing com `OpenTelemetry`, e expor métricas com `Prometheus`. Gerar cobertura de testes e documentação com `godoc`.
+Containerizar a API CRUD do [Módulo 09](go-basic/go-module-9/index.md) (`PostgreSQL`), configurar _logging estruturado_ com `zap`, tracing com `OpenTelemetry`, e expor métricas com `Prometheus`. Gerar cobertura de testes e documentação com `godoc`.
 
 ### Passo a passo
 

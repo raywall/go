@@ -82,7 +82,7 @@ const config: Config = {
           items: [
             {
               label: 'Golang',
-              to: '/docs/conteudo',
+              to: '/docs/go-basic/conteudo',
             }
             // {
             //   label: 'Golang + AWS Cloud (em breve)',
