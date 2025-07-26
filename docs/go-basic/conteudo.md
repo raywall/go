@@ -5,7 +5,7 @@ sidebar_label: Conteúdo programático
 
 # Conteúdo programático
 
-## [Módulo 01](./go-module-1/index.md) – Introdução e fundamentos da linguagem
+## [Módulo 01](go-module-1/index.md) – Introdução e fundamentos da linguagem
 
 <div className="row">
 <div className="col">
@@ -29,7 +29,7 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 02](./go-module-2/index.md) – Estruturas de controle e tipos compostos
+## [Módulo 02](go-module-2/index.md) – Estruturas de controle e tipos compostos
 
 <div className="row">
 <div className="col">
@@ -53,7 +53,7 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 03](./go-module-3/index.md) – Funções, métodos e interfaces
+## [Módulo 03](go-module-3/index.md) – Funções, métodos e interfaces
 
 <div className="row">
 <div className="col">
@@ -78,7 +78,7 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 04](./go-module-4/index.md) – Tratamento de erros
+## [Módulo 04](go-module-4/index.md) – Tratamento de erros
 
 <div className="row">
 <div className="col">
@@ -102,7 +102,7 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 05](./go-module-5/index.md) – Concorrência com goroutines e channels
+## [Módulo 05](go-module-5/index.md) – Concorrência com goroutines e channels
 
 <div className="row">
 <div className="col">
@@ -127,7 +127,7 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 06](./go-module-6/index.md) – Pacotes, módulos e organização do código
+## [Módulo 06](go-module-6/index.md) – Pacotes, módulos e organização do código
 
 <div className="row">
 <div className="col">
@@ -152,7 +152,7 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 07](./go-module-7/index.md) – Testes e qualidade de código
+## [Módulo 07](go-module-7/index.md) – Testes e qualidade de código
 
 <div className="row">
 <div className="col">
@@ -178,7 +178,7 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 08](./go-module-8/index.md) – Web APIs com net/http e Gin
+## [Módulo 08](go-module-8/index.md) – Web APIs com net/http e Gin
 
 <div className="row">
 <div className="col">
@@ -203,7 +203,7 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 09](./go-module-9/index.md) – Persistência com banco de dados
+## [Módulo 09](go-module-9/index.md) – Persistência com banco de dados
 
 <div className="row">
 <div className="col">
@@ -228,7 +228,7 @@ sidebar_label: Conteúdo programático
 </div>
 ---
 
-## [Módulo 10](./go-module-10/index.md) – Deploy, observabilidade e boas práticas
+## [Módulo 10](go-module-10/index.md) – Deploy, observabilidade e boas práticas
 
 <div className="row">
 <div className="col">
