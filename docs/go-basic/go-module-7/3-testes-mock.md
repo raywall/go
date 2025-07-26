@@ -22,7 +22,7 @@ go get github.com/stretchr/testify
 
 <InteractiveCodeSnippet 
     src="code/mod7/teste-mock.go" 
-    allowExecute={true} 
+    allowExecute={false} 
     allowEdit={false} />
 
 ## Pacote `gomock`

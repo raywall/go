@@ -39,7 +39,7 @@ psql -U postgres -c "CREATE DATABASE mydb;"
 
 ## Configuração
 
-1. Use a estrutura do [Módulo 08](go-module-8/5-laboratorio.md)
+1. Use a estrutura do [Módulo 08](go-basic/go-module-8/5-laboratorio.md)
 
 ```dirtree
 lab6/
@@ -95,7 +95,7 @@ require (
 
 ### Objetivo
 
-Refatorar o CRUD do [Módulo 08](go-module-8/5-laboratorio.md) para usar `PostgreSQL` com `GORM`, aplicar migrações com `golang-migrate`, e _implementar testes de integração_.
+Refatorar o CRUD do [Módulo 08](go-basic/go-module-8/5-laboratorio.md) para usar `PostgreSQL` com `GORM`, aplicar migrações com `golang-migrate`, e _implementar testes de integração_.
 
 ### Passo a passo
 

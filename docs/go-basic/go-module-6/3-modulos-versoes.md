@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-sidebar_label: Modulos e versionamnto
+sidebar_label: Módulos e versionamento
 ---
 
 # `go mod` e versionamento

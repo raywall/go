@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-sidebar_label: Conveções de projeto
+sidebar_label: Convenções de projeto
 ---
 
 # Convenções de projeto (`cmd`, `internal` e `pkg`)

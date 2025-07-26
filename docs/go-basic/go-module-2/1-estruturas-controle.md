@@ -38,7 +38,7 @@ if x := numero % 2; x == 0 { ... } // inicialização direta
 ## `for`
 
 - Única estrutura de laço em Go (não há `while` ou `do-while`)
-- Suporta três formas: `tradicional`, condição `simples` e `infinito`
+- Suporta quatro formas: `tradicional`, condição `simples`, `infinito` e `range`
 
 ### Exemplo
 

@@ -18,3 +18,9 @@ func processar(id int) error {
 	}
 	return nil
 }
+
+func main() {
+	if err := processar(45); err != nil {
+		fmt.Println(err)
+	}
+}

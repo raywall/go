@@ -20,4 +20,12 @@ func main() {
 		fmt.Println("Infinito")
 		break
 	}
+
+	// Range
+	numeros := []int{1, 2, 3}
+
+	fmt.Println("Números do slice:")
+	for indice, valor := range numeros {
+		fmt.Printf("%d. %d\n", indice, valor)
+	}
 }

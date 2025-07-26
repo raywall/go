@@ -21,7 +21,7 @@ import InteractiveCodeSnippet from '@theme/InteractiveCodeSnippet';
 
 <InteractiveCodeSnippet 
     src="code/mod8/api-gin-roteamento.go" 
-    allowExecute={true} 
+    allowExecute={false} 
     allowEdit={false} />
 
 ### Binding e validação
@@ -33,10 +33,10 @@ import InteractiveCodeSnippet from '@theme/InteractiveCodeSnippet';
 
 <InteractiveCodeSnippet 
     src="code/mod8/api-gin-binding-validacao.go" 
-    allowExecute={true} 
+    allowExecute={false} 
     allowEdit={false} />
 
-#### Comparação com Java:
+#### Comparação com Java
 
 ##### Java
 
