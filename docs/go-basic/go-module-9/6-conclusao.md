@@ -9,3 +9,4 @@ Este módulo cobriu persistência com `database/sql`, ORM com `GORM`, migraçõe
 
 :::tip Próximos passos
 No próximo módulo, exploraremos `deploy em produção`, `monitoramento` e `boas práticas para escalabilidade`, consolidando o aprendizado para aplicações reais.
+::

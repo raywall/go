@@ -3,7 +3,7 @@ sidebar_position: 1
 sidebar_label: Testes e qualidade de código
 ---
 
-# Testes e Qualidade de Código em Go
+# Testes e qualidade de código em Go
 
 <div className="row">
 <div className="col">

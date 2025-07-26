@@ -2,6 +2,10 @@ package main
 
 import "testing"
 
+func soma(a, b int) int {
+	return a + b
+}
+
 func TestSoma(t *testing.T) {
 	testes := []struct {
 		nome     string

@@ -5,33 +5,33 @@ sidebar_label: Structs e tags de struct
 
 import InteractiveCodeSnippet from '@theme/InteractiveCodeSnippet';
 
-## Structs e tags de struct
+# Structs e tags de struct
 
-### Structs
+## Structs
 
 - Equivalentes a classes em Java, mas sem herança
 - Definidas com `type Nome struct`
 
-#### Exemplo
+### Exemplo
 
 <InteractiveCodeSnippet 
     src="code/mod2/structs.go" 
     allowExecute={true} 
     allowEdit={false} />
 
-### Tags de struct
+## Tags de struct
 
 - Usadas para metadados, como serialização JSON
 - Declaradas com crases (`\``)
 
-#### Exemplo
+### Exemplo
 
 <InteractiveCodeSnippet 
     src="code/mod2/tags-de-struct.go" 
     allowExecute={true} 
     allowEdit={false} />
 
-#### Comparação com Java
+### Comparação com Java
 
 Structs substituem classes, mas tags são semelhantes às anotações (`@JsonProperty`) do Jackson em Java
 

@@ -17,3 +17,14 @@ func inspecionar(v interface{}) {
 		fmt.Println("Tipo desconhecido")
 	}
 }
+
+func main() {
+	// inspecionar um Produto
+	inspecionar(Produto{Nome: "Laptop", Preco: 1000})
+
+	// inspecionar uma string
+	inspecionar("Raywall")
+
+	// inspecionar um inteiro
+	inspecionar(45)
+}

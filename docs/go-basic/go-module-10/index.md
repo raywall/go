@@ -3,7 +3,7 @@ sidebar_position: 1
 sidebar_label: Módulo 10
 ---
 
-# Deploy, observabilidade e boas ppráticas em Go
+# Deploy, observabilidade e boas práticas em Go
 
 <div className="row">
 <div className="col">

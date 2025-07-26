@@ -16,7 +16,7 @@ import InteractiveCodeSnippet from '@theme/InteractiveCodeSnippet';
 
 <InteractiveCodeSnippet 
     src="code/mod7/benchmarks.go" 
-    allowExecute={true} 
+    allowExecute={false} 
     allowEdit={false} />
 
 ### Execução

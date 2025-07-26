@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"log/slog"
+	"os"
 )
 
 // Erros personalizados
@@ -120,8 +121,11 @@ func exibirProdutos(repo RepositorioProdutos) error {
 }
 
 func main() {
+	// Configurar logger JSON
+	logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
+
 	// Inicializar repositório com logger
-	repo := NovoRepositorioEmMemoria()
+	repo := NovoRepositorioEmMemoria(logger)
 
 	// Criar produtos
 	p1, err := repo.Criar("Laptop", 999.99)

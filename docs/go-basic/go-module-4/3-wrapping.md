@@ -5,7 +5,7 @@ sidebar_label: Wrapping e unwrapping
 
 import InteractiveCodeSnippet from '@theme/InteractiveCodeSnippet';
 
-# Wrapping e Unwrapping com `errors.Is` e `errors.As`
+# Wrapping e unwrapping com `errors.Is` e `errors.As`
 
 ## Wrapping
 

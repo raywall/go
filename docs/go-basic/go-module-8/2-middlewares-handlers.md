@@ -21,7 +21,7 @@ import InteractiveCodeSnippet from '@theme/InteractiveCodeSnippet';
 
 <InteractiveCodeSnippet 
     src="code/mod8/api-middleware.go" 
-    allowExecute={true} 
+    allowExecute={false} 
     allowEdit={false} />
 
 ### Comparação com Java

@@ -24,7 +24,7 @@ import InteractiveCodeSnippet from '@theme/InteractiveCodeSnippet';
 
 <InteractiveCodeSnippet 
     src="code/mod8/api-gin-json.go" 
-    allowExecute={true} 
+    allowExecute={false} 
     allowEdit={false} />
 
 ## Teste

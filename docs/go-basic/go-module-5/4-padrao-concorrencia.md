@@ -5,7 +5,7 @@ sidebar_label: Padrões de concorrência
 
 import InteractiveCodeSnippet from '@theme/InteractiveCodeSnippet';
 
-# Padrões de Concorrência em Go
+# Padrões de concorrência em Go
 
 ## Pipeline:
 
