@@ -43,6 +43,41 @@ const config: Config = {
     },
   }, 
 
+  // Adicione aqui a seção plugins:
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        createRedirects(existingPath: string) {
+          if (!existingPath.startsWith('/docs/')) {
+            return undefined;
+          }
+
+          const suffix = existingPath.replace('/docs/', '');
+
+          const singlePages = ['conteudo', 'estrutura', 'objetivo'];
+
+          if (singlePages.includes(suffix)) {
+            return [`/docs/go-basic/${suffix}`];
+          }
+
+          const modulePrefixMatch = suffix.match(/^go-module-(\d{1,2})(\/.+)?$/);
+
+          if (modulePrefixMatch) {
+            const moduleNumber = parseInt(modulePrefixMatch[1], 10);
+            const topicPart = modulePrefixMatch[2] ?? '';
+
+            if (moduleNumber >= 1 && moduleNumber <= 10) {
+              return [`/docs/go-basic/go-module-${moduleNumber}${topicPart}`];
+            }
+          }
+
+          return undefined;
+        },
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
@@ -127,6 +162,7 @@ const config: Config = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Raywall Malheiros. Built with Docusaurus.`,
     },
+
     prism: {
       // theme: require('prism-react-renderer/github'),
       // darkTheme: require('prism-react-renderer/dracula'),
