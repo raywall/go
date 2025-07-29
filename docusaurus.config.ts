@@ -48,30 +48,27 @@ const config: Config = {
     [
       '@docusaurus/plugin-client-redirects',
       {
-        createRedirects(existingPath: string) {
-          if (!existingPath.startsWith('/docs/')) {
-            return undefined;
+        // Redirect específico
+        redirects: [
+          {
+            from: '/docs/estrutura',
+            to: '/docs/go-basic/estrutura',
+          },
+          {
+            from: '/docs/conteudo',
+            to: '/docs/go-basic/conteudo',
+          },
+          {
+            from: '/docs/objetivo',
+            to: '/docs/go-basic/objetivo',
+          },
+        ],
+        createRedirects(existingPath) {
+          if (existingPath.includes('/docs/go-basic/go-module-')) {
+            return [
+              existingPath.replace('/docs/go-basic/', '/docs/'),
+            ];
           }
-
-          const suffix = existingPath.replace('/docs/', '');
-
-          const singlePages = ['conteudo', 'estrutura', 'objetivo'];
-
-          if (singlePages.includes(suffix)) {
-            return [`/docs/go-basic/${suffix}`];
-          }
-
-          const modulePrefixMatch = suffix.match(/^go-module-(\d{1,2})(\/.+)?$/);
-
-          if (modulePrefixMatch) {
-            const moduleNumber = parseInt(modulePrefixMatch[1], 10);
-            const topicPart = modulePrefixMatch[2] ?? '';
-
-            if (moduleNumber >= 1 && moduleNumber <= 10) {
-              return [`/docs/go-basic/go-module-${moduleNumber}${topicPart}`];
-            }
-          }
-
           return undefined;
         },
       },
